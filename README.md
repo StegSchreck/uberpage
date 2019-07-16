@@ -14,6 +14,7 @@ A simple webpage for displaying a collection of links. Each link can have an opt
 
 ## How to Use
 * Fill `data.json` with your links.
+* Put the necessary images in appropriate quality at `public/img`
 * Deploy on somewhere.
 * Done.
 
