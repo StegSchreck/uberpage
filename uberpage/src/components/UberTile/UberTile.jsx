@@ -15,10 +15,10 @@ class UberTile extends React.Component {
             width: itemWidth + 'vw',
             minWidth: itemWidth + 'vw',
             maxWidth: itemWidth + 'vw',
-            gridColumnStart: this.props.gridColumn,
-            gridColumnEnd: this.props.gridColumn,
+            gridColumnStart: this.props.gridColumnStart,
+            gridColumnEnd: this.props.gridColumnEnd,
             gridRowStart: this.props.gridRow,
-            gridRowEnd: this.props.gridRow,
+            gridRowEnd: this.props.gridRow + 1,
         };
         const backgroundImageStyle = {
             ...tileStyle,
@@ -33,13 +33,14 @@ class UberTile extends React.Component {
 
         if (item.background_color) {backgroundImageStyle['backgroundColor'] = item.background_color}
         if (item.text_color) {textStyle['color'] = item.text_color}
-
         if (item.background_image) {backgroundImageStyle['backgroundImage'] = 'url(/img/' + item.background_image + ')';}
         if (item.background_size) {backgroundImageStyle['backgroundSize'] = item.background_size;}
         if (item.title && item.background_image) {backgroundImageStyle['opacity'] = '0.2'}
 
-        // TODO 1 - handle max text width
-        // TODO 2 - show item description as overlay
+        // console.log(`item ${this.props.key} -> c=${this.props.gridColumnStart} r=${this.props.gridRow}`);
+
+        // TODO - handle max text width
+        // TODO - show item description as overlay
         return (
           <div className="UberTile" style={tileStyle}>
               <a className="UberTile-link" href={item.link} title={item.description} target={settings.default_link_target} style={linkStyle}>

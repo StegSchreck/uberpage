@@ -12,8 +12,7 @@ function App() {
   };
   data.items.push(defaultItem);
 
-  // TODO 1 - handle odd number of items --> last items gets two columns width
-  // TODO 2 - set max number of columns depending on viewport width
+  // TODO - set max number of columns depending on viewport width
 
   function calculateNumberOfColumns() {
     if (data.items.length <= 3) {
@@ -28,16 +27,22 @@ function App() {
   const numberOfColumns = calculateNumberOfColumns();
   const numberOfRows = Math.ceil(data.items.length / numberOfColumns);
   const itemHeight = 100 / numberOfRows;
-  const itemWidth = 100 / numberOfColumns;
+  let itemWidth = 100 / numberOfColumns;
   const gridStyle = { gridTemplateColumns: 'auto '.repeat(numberOfColumns) };
+  const emptySlots = (numberOfColumns * numberOfRows) - data.items.length;
+  // console.log(`${data.items.length} items -> c=${numberOfColumns} r=${numberOfRows} -> ${emptySlots} empty slots   #   ${JSON.stringify(gridStyle)}`);
 
   return (
     <div className="App" style={gridStyle}>
       {
         data.items.map((item, index) => {
-          const gridColumn = index % numberOfColumns + 1;
+          const gridColumnStart = index % numberOfColumns + 1;
           const gridRow = Math.floor(index / numberOfColumns + 1);
-          return <UberTile key={index} item={item} settings={data.settings} height={itemHeight} width={itemWidth} gridColumn={gridColumn} gridRow={gridRow}/>;
+          const isLastItem = index + 1 === data.items.length;
+          // console.log(`index=${index} ${isLastItem}`);
+          const gridColumnEnd = isLastItem ? gridColumnStart + (emptySlots + 1) : gridColumnStart + 1;
+          itemWidth = isLastItem ? itemWidth * (emptySlots + 1) : itemWidth;
+          return <UberTile key={index} item={item} settings={data.settings} height={itemHeight} width={itemWidth} gridColumnStart={gridColumnStart} gridColumnEnd={gridColumnEnd} gridRow={gridRow}/>;
         })
       }
     </div>
