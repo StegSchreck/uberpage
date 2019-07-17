@@ -18,11 +18,11 @@
   position: absolute;
 }
 
-.UberTile-background-image {
-  filter: brightness(80%);
+.UberTile {
+  background-color: #282c34;
 }
 
-.UberTile-background-image:hover {
+.UberTile-background-image {
   filter: brightness(80%);
 }
 
@@ -38,8 +38,4 @@
   box-shadow: 0 0 8px 5px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   transform: scale(1.1);
-}
-
-.UberTile:last-child:hover {
-  box-shadow: none;
 }

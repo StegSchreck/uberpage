@@ -9,7 +9,7 @@ function App() {
       "title": "About this page",
       "background_image": 'UberPage.png',
       "link": "https://github.com/StegSchreck/uberpage",
-      "description": "This page was created with UberPage."
+      "description": "This page was created using the UberPage project."
     };
   return (
     <div className="App">

@@ -10,10 +10,10 @@ class UberTile extends React.Component {
         const tileStyle = {
             height: itemHeight + 'vh',
             minHeight: itemHeight + 'vh',
-            maxHeight: itemHeight + 'vh'
+            maxHeight: itemHeight + 'vh',
         };
         const backgroundImageStyle = {
-            ...tileStyle
+            ...tileStyle,
         };
         const fontSize = itemHeight / 5;
         const textPosition = itemHeight / 2 + fontSize / 2;
