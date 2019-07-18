@@ -14,8 +14,11 @@
   z-index: 1;
 }
 
-.UberTile-text{
-  position: absolute;
+.UberTile-text > span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1em;
+  padding: 3vh 3vw;
 }
 
 .UberTile {

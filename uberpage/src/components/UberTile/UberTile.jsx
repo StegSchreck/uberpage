@@ -7,28 +7,39 @@ class UberTile extends React.Component {
         const settings = this.props.settings;
         const itemHeight = this.props.height;
         const itemWidth = this.props.width || 100;
-        const linkStyle = {};
-        const tileStyle = {
-            height: itemHeight + 'vh',
-            minHeight: itemHeight + 'vh',
-            maxHeight: itemHeight + 'vh',
-            width: itemWidth + 'vw',
-            minWidth: itemWidth + 'vw',
-            maxWidth: itemWidth + 'vw',
+        const widthStyle = {
+            width: `${itemWidth}vw`,
+            minWidth: `${itemWidth}vw`,
+            maxWidth: `${itemWidth}vw`,
+        };
+        const heightStyle = {
+            height: `${itemHeight}vh`,
+            minHeight: `${itemHeight}vh`,
+            maxHeight: `${itemHeight}vh`,
+        };
+        const gridStyle = {
             gridColumnStart: this.props.gridColumnStart,
             gridColumnEnd: this.props.gridColumnEnd,
             gridRowStart: this.props.gridRow,
             gridRowEnd: this.props.gridRow + 1,
         };
-        const backgroundImageStyle = {
-            ...tileStyle,
+        const tileStyle = {
+            ...widthStyle,
+            ...heightStyle,
+            ...gridStyle,
         };
-        const fontSize = itemHeight / 5;
-        const textPosition = itemHeight / 2 + fontSize / 2;
+        const backgroundImageStyle = {
+            ...widthStyle,
+            ...heightStyle,
+            ...gridStyle,
+        };
         const textStyle = {
-            ...tileStyle,
-            marginTop: `-${textPosition}vh`,
-            fontSize: `${fontSize}vh`,
+            ...widthStyle,
+            ...heightStyle,
+            ...gridStyle,
+            lineHeight: `${itemHeight}vh`,
+            marginTop: `-${itemHeight}vh`,
+            fontSize: `${itemHeight / 5}vh`,
         };
 
         if (item.background_color) {backgroundImageStyle['backgroundColor'] = item.background_color}
@@ -54,11 +65,12 @@ class UberTile extends React.Component {
 
         // TODO - handle max text width
         // TODO - show item description as overlay
+
         return (
           <div className="UberTile" style={tileStyle}>
-              <a className="UberTile-link" href={item.link} title={item.description} target={settings.default_link_target} style={linkStyle}>
+              <a className="UberTile-link" href={item.link} title={item.description} target={settings.default_link_target}>
                   <div className="UberTile-background-image" style={backgroundImageStyle}/>
-                  <div className="UberTile-text" style={textStyle}>{item.title}</div>
+                  <div className="UberTile-text" style={textStyle}><span>{item.title}</span></div>
               </a>
           </div>
         );
