@@ -59,4 +59,4 @@ Always write a clear log message for your commits. One-line messages are fine fo
 ### Coding Conventions
 The project includes a linting configuration at `.eslintrc.json`, which is taken from AirBNB. In order to check if your proposed changes are compliant with that configuration, you can run `npm run lint`.
 
-Please make sure that you adapt the existing tests if necessary or write new ones. The unit tests can be executed locally by running `npm test`.
+Please make sure that you adapt the existing tests if necessary or write new ones. The unit tests can be executed locally by running `npm test -- --watchAll`.

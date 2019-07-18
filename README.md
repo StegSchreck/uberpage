@@ -4,9 +4,6 @@
 
 # UberPage
 [![Build Status](https://travis-ci.org/StegSchreck/uberpage.svg?branch=master)](https://travis-ci.org/StegSchreck/uberpage)
-[![Maintainability by CodeClimate](https://api.codeclimate.com/v1/badges/024f5abf08c39ce6b497/maintainability)](https://codeclimate.com/github/StegSchreck/uberpage/maintainability)
-[![Test Coverage by CodeClimate](https://api.codeclimate.com/v1/badges/024f5abf08c39ce6b497/test_coverage)](https://codeclimate.com/github/StegSchreck/uberpage/test_coverage)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/dcb96592805143aa8cc1de99b1e9f836)](https://www.codacy.com/app/StegSchreck/uberpage?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=StegSchreck/uberpage&amp;utm_campaign=Badge_Grade)
 [![License](https://img.shields.io/github/license/StegSchreck/uberpage.svg)](https://github.com/StegSchreck/uberpage/blob/master/LICENSE)
 [![Latest Release](https://img.shields.io/github/release/StegSchreck/uberpage.svg?logo=github)](https://github.com/StegSchreck/uberpage/releases)
 
