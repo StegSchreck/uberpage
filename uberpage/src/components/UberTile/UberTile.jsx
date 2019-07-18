@@ -33,9 +33,22 @@ class UberTile extends React.Component {
 
         if (item.background_color) {backgroundImageStyle['backgroundColor'] = item.background_color}
         if (item.text_color) {textStyle['color'] = item.text_color}
-        if (item.background_image) {backgroundImageStyle['backgroundImage'] = 'url(/img/' + item.background_image + ')';}
-        if (item.background_size) {backgroundImageStyle['backgroundSize'] = item.background_size;}
-        if (item.title && item.background_image) {backgroundImageStyle['opacity'] = '0.2'}
+        if (item.background_logo) {
+            backgroundImageStyle['backgroundImage'] = 'url(/img/' + item.background_logo + ')';
+            backgroundImageStyle['backgroundSize'] = item.background_logo_size ? item.background_logo_size : '50%';
+        }
+        if (item.background_picture) {
+            let backgroundImagePrefix = '';
+            let backgroundSizePrefix = '';
+            if (item.background_logo) {
+                backgroundImagePrefix = `${backgroundImageStyle['backgroundImage']}, `;
+                backgroundSizePrefix = `${backgroundImageStyle['backgroundSize']}, `;
+            }
+            backgroundImageStyle['backgroundImage'] = `${backgroundImagePrefix}url(/img/${item.background_picture})`;
+            const backgroundSizeSuffix = item.background_picture_size ? item.background_picture_size : 'cover';
+            backgroundImageStyle['backgroundSize'] = `${backgroundSizePrefix}${backgroundSizeSuffix}`;
+        }
+        if (item.title && item.background_logo) {backgroundImageStyle['opacity'] = '0.2'}
 
         // console.log(`item ${this.props.key} -> c=${this.props.gridColumnStart} r=${this.props.gridRow}`);
 

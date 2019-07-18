@@ -5,10 +5,11 @@ import data from '../../data.json';
 
 function App() {
   const defaultItem = {
-    "title": "About this page",
-    "background_image": 'UberPage.png',
     "link": "https://github.com/StegSchreck/uberpage",
-    "description": "This page was created using the UberPage project."
+    "title": "About this page",
+    "description": "This page was created using the UberPage project.",
+    "background_logo": 'UberPage.png',
+    "background_logo_size": "75%"
   };
   data.items.push(defaultItem);
 

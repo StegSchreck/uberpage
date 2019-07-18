@@ -1,17 +1,20 @@
 {
   "items": [
     {
-      "background_image": "GitHub_white.png",
-      "background_color": "#000000",
-      "text_color": "#ffffff",
       "link": "https://github.com/StegSchreck",
-      "description": "My open source projects on GitHub"
+      "text_color": "#ffffff",
+      "description": "My open source projects on GitHub",
+      "background_logo": "GitHub_white.png",
+      "background_color": "#000000"
     },
     {
-      "background_image": "AngularCV.png",
-      "background_color": "#ffffff",
       "link": "https://cv.schreck.berlin",
-      "description": "My Angular based online-CV"
+      "description": "My Angular based online-CV",
+      "background_logo": "AngularCV_white_transparent.png",
+      "background_logo_size": "70%",
+      "background_picture": "cover.jpg",
+      "background_picture_size": "cover",
+      "background_color": "#ffffff"
     }
   ],
   "settings": {
