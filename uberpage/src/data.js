@@ -1,4 +1,4 @@
-{
+export default {
   "items": [
     {
       "link": "https://github.com/StegSchreck",
@@ -20,4 +20,4 @@
   "settings": {
     "default_link_target": "_blank"
   }
-}
+};

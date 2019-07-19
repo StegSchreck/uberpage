@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import UberTile from '../UberTile/UberTile.jsx';
-import data from '../../data.json';
+import data from '../../data';
 
 function App() {
   const defaultItem = {
