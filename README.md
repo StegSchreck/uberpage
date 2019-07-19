@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/StegSchreck/uberpage/master/src/img/UberPage.png" width="300px">
+  <img src="https://raw.githubusercontent.com/StegSchreck/uberpage/master/public/img/UberPage.png" width="300px">
 </p>
 
 # UberPage
@@ -16,16 +16,21 @@ A simple webpage for displaying a collection of links. Each link can have an opt
 * Done.
 
 ### Possible Configuration Values for an Item
-```json
-    {
-      "link": "https://github.com/StegSchreck",
-      "description": "My open source projects on GitHub" // optional
-      "text_color": "#ffffff", // defaults to '#4A86E8' - affects both title and description (if set)
-      "background_logo": "GitHub_white.png", // optional
-      "background_logo_size": "70%", // defaults to '50%'
-      "background_picture": "cover.jpg", // optional
-      "background_picture_size": "cover", // defaults to 'cover'
-      "background_color": "#000000" // defaults to '#282c34'
+```javascript
+    export default {
+      "items": [
+        {
+          "link": "https://github.com/StegSchreck",
+          "description": "My open source projects on GitHub", // optional
+          "text_color": "#ffffff", // defaults to '#4A86E8' - affects both title and description (if set)
+          "background_logo": "GitHub_white.png", // optional
+          "background_logo_size": "70%", // defaults to '50%'
+          "background_picture": "cover.jpg", // optional
+          "background_picture_size": "cover", // defaults to 'cover'
+          "background_color": "#000000" // defaults to '#282c34'
+        }
+        // ...
+      ]
     }
 ```
 
