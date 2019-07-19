@@ -5,9 +5,10 @@ addons:
   chrome: stable
 before_script:
 - cd uberpage
+- npm install
 - npm install -g codacy-coverage
 script:
-- npm lint
+- npm run lint
 - CI=true npm test -- --coverage
 - CI=true npm run build
 after_script:
