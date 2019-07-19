@@ -12,27 +12,30 @@
 A simple webpage for displaying a collection of links. Each link can have an optional background image, link text, or icon. The layout of the links will be generated automatically, depending on the number of links to be displayed.
 
 ## How to Use
-* Fill `data.json` with your items. See about possible configuration in the next paragraph.
-* Put the necessary images in appropriate quality at `public/img`. Reference them in the `data.json` by filename only, not including the path.
+* Fill `data.js` with your items. See about possible configuration in the next paragraph.
+* Put the necessary images in appropriate quality at `public/img`. Reference them in the `data.js` by filename only, not including the path.
 * Deploy on somewhere. I've included a guide for hosting it on AWS.
 * Done.
 
 ### Possible Configuration Values for an Item
+`data.js`: 
 ```javascript
     export default {
-      "items": [
+      items: [
         {
-          "link": "https://github.com/StegSchreck",
-          "description": "My open source projects on GitHub", // optional
-          "text_color": "#ffffff", // defaults to '#4A86E8' - affects both title and description (if set)
-          "background_logo": "GitHub_white.png", // optional
-          "background_logo_size": "70%", // defaults to '50%'
-          "background_picture": "cover.jpg", // optional
-          "background_picture_size": "cover", // defaults to 'cover'
-          "background_color": "#000000" // defaults to '#282c34'
-        }
-        // ...
-      ]
+          link: 'https://github.com/StegSchreck',
+          title: 'https://github.com/StegSchreck',
+          description: 'My open source projects on GitHub', // optional
+          text_color: '#ffffff', // defaults to '#4A86E8' - affects both title and description (if set)
+          background_logo: 'GitHub_white.png', // optional
+          background_logo_size: '70%', // defaults to '50%'
+          background_picture: 'cover.jpg', // optional
+          background_picture_size: 'cover', // defaults to 'cover'
+          background_color: '#000000', // defaults to '#282c34'
+        },
+        // ... more items ...
+      ],
+      // ...
     }
 ```
 
