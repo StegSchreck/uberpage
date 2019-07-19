@@ -3,8 +3,9 @@
 </p>
 
 # UberPage
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8e7a29576bd641b68f54157d5cb5c6bd)](https://app.codacy.com/app/StegSchreck/uberpage?utm_source=github.com&utm_medium=referral&utm_content=StegSchreck/uberpage&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.org/StegSchreck/uberpage.svg?branch=master)](https://travis-ci.org/StegSchreck/uberpage)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8e7a29576bd641b68f54157d5cb5c6bd)](https://app.codacy.com/app/StegSchreck/uberpage?utm_source=github.com&utm_medium=referral&utm_content=StegSchreck/uberpage&utm_campaign=Badge_Grade_Dashboard)
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/8e7a29576bd641b68f54157d5cb5c6bd)](https://www.codacy.com/app/StegSchreck/uberpage?utm_source=github.com&utm_medium=referral&utm_content=StegSchreck/uberpage&utm_campaign=Badge_Coverage)
 [![License](https://img.shields.io/github/license/StegSchreck/uberpage.svg)](https://github.com/StegSchreck/uberpage/blob/master/LICENSE)
 [![Latest Release](https://img.shields.io/github/release/StegSchreck/uberpage.svg?logo=github)](https://github.com/StegSchreck/uberpage/releases)
 
