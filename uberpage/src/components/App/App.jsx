@@ -11,7 +11,7 @@ function App() {
     background_logo: 'UberPage.svg',
     background_logo_size: '75%',
   };
-  data.items.push(defaultItem);
+  if (data.settings.default_item === undefined || !data.settings.default_item) { data.items.push(defaultItem); }
 
   // TODO - set max number of columns depending on viewport width
 

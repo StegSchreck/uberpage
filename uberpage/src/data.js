@@ -9,7 +9,7 @@ export default {
     },
     {
       link: 'https://cv.schreck.berlin',
-      description: 'My Angular based online-CV',
+      description: 'Angular based online-CV',
       background_logo: 'AngularCV_white_transparent.svg',
       background_logo_size: '70%',
       background_picture: 'cover.jpg',
