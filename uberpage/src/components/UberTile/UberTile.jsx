@@ -45,7 +45,7 @@ class UberTile extends React.Component {
     if (item.background_color) {backgroundImageStyle.backgroundColor = item.background_color;}
     if (item.text_color) {textStyle.color = item.text_color;}
     if (item.background_logo) {
-      backgroundImageStyle.backgroundImage = `url(/img/'${item.background_logo}')`;
+      backgroundImageStyle.backgroundImage = `url(/img/${item.background_logo})`;
       backgroundImageStyle.backgroundSize = item.background_logo_size ? item.background_logo_size : '50%';
     }
     if (item.background_picture) {

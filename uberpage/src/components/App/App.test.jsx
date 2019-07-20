@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App.jsx';
 import * as data from '../../data';
-jest.mock('../../data');
 
 describe('App Component', () => {
   it('renders without crashing', () => {
@@ -15,7 +14,7 @@ describe('App Component', () => {
     data.default = {
       items: [],
       settings: {
-        'default_link_target': '_blank'
+        default_link_target: '_blank'
       }
     };
 
@@ -32,7 +31,7 @@ describe('App Component', () => {
     data.default = {
       items: [{title: 'item1'}, {title: 'item2'}, {title: 'item3'}],
       settings: {
-        'default_link_target': '_blank'
+        default_link_target: '_blank'
       }
     };
 
@@ -51,7 +50,7 @@ describe('App Component', () => {
     data.default = {
       items: [{title: 'item1'}, {title: 'item2'}],
       settings: {
-        'default_link_target': '_blank'
+        default_link_target: '_blank'
       }
     };
 
@@ -69,7 +68,7 @@ describe('App Component', () => {
     data.default = {
       items: [{title: 'item1'}, {title: 'item2'}, {title: 'item3'}, {title: 'item4'}, {title: 'item5'}, {title: 'item6'}, {title: 'item7'}, {title: 'item8'}],
       settings: {
-        'default_link_target': '_blank'
+        default_link_target: '_blank'
       }
     };
 
