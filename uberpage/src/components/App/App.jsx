@@ -8,7 +8,7 @@ function App() {
     link: 'https://github.com/StegSchreck/uberpage',
     title: 'About this page',
     description: 'This page was created using the UberPage project.',
-    background_logo: 'UberPage.png',
+    background_logo: 'UberPage.svg',
     background_logo_size: '75%',
   };
   data.items.push(defaultItem);

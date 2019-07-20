@@ -25,11 +25,11 @@ For a live demo, you can visit [uberpage.schreck.berlin](https://uberpage.schrec
     export default {
       items: [
         {
-          link: 'https://github.com/StegSchreck',
-          title: 'https://github.com/StegSchreck',
+          link: 'https://github.com/StegSchreck', // optional
+          title: 'https://github.com/StegSchreck', // optional
           description: 'My open source projects on GitHub', // optional
           text_color: '#ffffff', // defaults to '#4A86E8' - affects both title and description (if set)
-          background_logo: 'GitHub_white.png', // optional
+          background_logo: 'GitHub_white.svg', // optional
           background_logo_size: '70%', // defaults to '50%'
           background_picture: 'cover.jpg', // optional
           background_picture_size: 'cover', // defaults to 'cover'

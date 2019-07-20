@@ -15,6 +15,8 @@
 }
 
 .UberTile-text > span {
+  font-family: 'Nova Square', Helvetica, sans-serif;
+  color: #4A86E8;
   display: inline-block;
   vertical-align: middle;
   line-height: 1em;
@@ -36,7 +38,7 @@
   vertical-align: middle;
 }
 
-.UberTile:hover {
+.UberTile.withLink:hover {
   filter: brightness(120%);
   box-shadow: 0 0 8px 5px rgba(0, 0, 0, 0.2);
   z-index: 1000;

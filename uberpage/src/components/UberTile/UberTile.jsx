@@ -66,11 +66,18 @@ class UberTile extends React.Component {
     // TODO - show item description as overlay
 
     return (
-      <div className="UberTile" style={tileStyle}>
-        <a className="UberTile-link" href={item.link} title={item.description} target={settings.default_link_target}>
-          <div className="UberTile-background-image" style={backgroundImageStyle} />
-          <div className="UberTile-text" style={textStyle}><span>{item.title}</span></div>
-        </a>
+      <div className={`UberTile${item.link ? ' withLink' : ''}`} style={tileStyle}>
+        {item.link ? (
+          <a className="UberTile-link" href={item.link} title={item.description} target={settings.default_link_target}>
+            <div className="UberTile-background-image" style={backgroundImageStyle} />
+            <div className="UberTile-text" style={textStyle}><span>{item.title}</span></div>
+          </a>
+        ) : (
+          <span>
+            <div className="UberTile-background-image" style={backgroundImageStyle} />
+            <div className="UberTile-text" style={textStyle}><span>{item.title}</span></div>
+          </span>
+        )}
       </div>
     );
   }

@@ -26,7 +26,7 @@ describe('UberTile Component', () => {
     expect(uberTiles[0].getElementsByClassName('UberTile-link')[0].attributes[1].value).toBe(defaultItem.link);
     expect(uberTiles[0].getElementsByClassName('UberTile-background-image')[0].attributes[1].value.includes(defaultItem.background_logo));
     expect(uberTiles[0].getElementsByClassName('UberTile-background-image')[0].attributes[1].value.includes(defaultItem.background_logo_size));
-    expect(uberTiles[0].getElementsByClassName('UberTile-text')[0].getElementsByTagName('span')[0].textContent.includes(defaultItem.title));
+    expect(uberTiles[0].getElementsByClassName('UberTile-text')[0].getElementsByTagName('span')[0].textContent).toBe(defaultItem.title);
     ReactDOM.unmountComponentAtNode(div);
   });
 
@@ -56,7 +56,27 @@ describe('UberTile Component', () => {
     expect(uberTiles[0].getElementsByClassName('UberTile-background-image')[0].attributes[1].value.includes(defaultItem.background_picture));
     expect(uberTiles[0].getElementsByClassName('UberTile-background-image')[0].attributes[1].value.includes(defaultItem.background_picture_size));
     expect(uberTiles[0].getElementsByClassName('UberTile-text')[0].attributes[1].value.includes(defaultItem.text_color));
-    expect(uberTiles[0].getElementsByClassName('UberTile-text')[0].getElementsByTagName('span')[0].textContent.includes(defaultItem.title));
+    expect(uberTiles[0].getElementsByClassName('UberTile-text')[0].getElementsByTagName('span')[0].textContent).toBe(defaultItem.title);
+    ReactDOM.unmountComponentAtNode(div);
+  });
+
+  it('renders minimalisitc item tile', () => {
+    const defaultItem = {};
+    const div = document.createElement('div');
+    ReactDOM.render(<UberTile item={defaultItem} settings={{}} height={100} width={100} gridColumnStart={1} gridColumnEnd={2} gridRow={1} />, div);
+    const uberTiles = ReactDOM.findDOMNode(div).getElementsByClassName('UberTile');
+
+    expect(uberTiles.length).toBe(1);
+    expect(uberTiles[0].attributes[1].value).toBe('width: 100vw; min-width: 100vw; max-width: 100vw; height: 100vh; min-height: 100vh; max-height: 100vh; grid-column-start: 1; grid-column-end: 2; grid-row-start: 1; grid-row-end: 2;');
+    expect(uberTiles[0].getElementsByClassName('UberTile-link').length).toBe(0);
+    expect(uberTiles[0].getElementsByClassName('UberTile-background-image')[0].attributes[1].value.includes('opacity: 0.2'));
+    expect(!uberTiles[0].getElementsByClassName('UberTile-background-image')[0].attributes[1].value.includes(defaultItem.background_color));
+    expect(!uberTiles[0].getElementsByClassName('UberTile-background-image')[0].attributes[1].value.includes(defaultItem.background_logo));
+    expect(!uberTiles[0].getElementsByClassName('UberTile-background-image')[0].attributes[1].value.includes(defaultItem.background_logo_size));
+    expect(!uberTiles[0].getElementsByClassName('UberTile-background-image')[0].attributes[1].value.includes(defaultItem.background_picture));
+    expect(!uberTiles[0].getElementsByClassName('UberTile-background-image')[0].attributes[1].value.includes(defaultItem.background_picture_size));
+    expect(!uberTiles[0].getElementsByClassName('UberTile-text')[0].attributes[1].value.includes(defaultItem.text_color));
+    expect(uberTiles[0].getElementsByClassName('UberTile-text')[0].getElementsByTagName('span')[0].textContent).toBe('');
     ReactDOM.unmountComponentAtNode(div);
   });
 });
