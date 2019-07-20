@@ -59,7 +59,7 @@ class UberTile extends React.Component {
       const backgroundSizeSuffix = item.background_picture_size ? item.background_picture_size : 'cover';
       backgroundImageStyle.backgroundSize = `${backgroundSizePrefix}${backgroundSizeSuffix}`;
     }
-    if (item.title && item.background_logo) { backgroundImageStyle.opacity = '0.2'; }
+    if (item.title && (item.background_logo || item.background_picture)) { backgroundImageStyle.opacity = '0.2'; }
 
     // console.log(`item ${this.props.key} -> c=${this.props.gridColumnStart} r=${this.props.gridRow}`);
 
