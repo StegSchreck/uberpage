@@ -5,6 +5,8 @@
 # UberPage
 After you forked this project and adjusted it to your needs (configured with your data), you might want to deploy it in order to make it available to everyone.
 
+I created an overview of GitHub projects as my [GitHub Page](https://stegschreck.github.io/).
+
 ## Deployment to GitHub Pages
 This is a little guide of how to deploy this React project to [GitHub Pages](https://help.github.com/en/categories/github-pages-basics). You still can deploy it in a different way. This is only a suggestion.
 
@@ -27,3 +29,6 @@ npm run deploy
 This will then deploy to the master branch of the repository to the specified repository. In order to make the GitHub user page work, it has to be deployed in the master branch.
 
 The deployment might take a couple of minutes.
+
+## Automation with Travis
+If you plan to use TravisCI, you can check in this repository how to let it deploy to GitHub Pages after a successful build on the master branch.

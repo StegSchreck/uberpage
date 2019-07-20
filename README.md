@@ -11,7 +11,7 @@
 
 A simple webpage for displaying a collection of links. Each link can have an optional background image, link text, or icon. The layout of the links will be generated automatically, depending on the number of links to be displayed.
 
-For a live demo, you can visit [uberpage.schreck.berlin](https://uberpage.schreck.berlin), for which this project was created initially.
+For a live demo, you can visit [uberpage.schreck.berlin](https://uberpage.schreck.berlin), for which this project was created initially. I also created an overview of GitHub projects as my [GitHub Page](https://stegschreck.github.io/).
 
 ## How to Use
 * Fill `data.js` with your items. See about possible configuration in the next paragraph.
