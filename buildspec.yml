@@ -22,5 +22,5 @@ phases:
 artifacts:
   files:
       - '**/*'
-  base-directory: 'build*'
+  base-directory: 'uberpage/build*'
   discard-paths: yes
