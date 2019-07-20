@@ -112,6 +112,9 @@ I recommend further reading for all AWS resources you are going to create in ord
   * Click on "Create Distribution" and select "Web" as distribution method
   * Select the S3 bucket you previously created as "Origin Domain Name" from the displayed suggestions
   * You can leave the generated "Origin ID"
+  * If you want to let your visitors only use the `uberpage.yourdomain.tld` and not the Amazon S3 URL, you can set "Restrict Bucket Access" to Yes
+    * After creating a new "Origin Access Identity", you will be asked, if you want to update the Bucket Policy. I recommend to choose yes
+    * Afterwards go to the corresponding S3 Bucket and remove the policy added in step 1a, but keep the one added by CloudFront
   * I recommend choosing `Redirect HTTP to HTTPS` in "Viewer Protocol Policy"
   * Scroll down to "Distribution Settings"
   * Choose the price class for your needs (the more locations you enable, the higher the price)
