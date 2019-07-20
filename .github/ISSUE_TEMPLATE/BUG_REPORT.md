@@ -18,10 +18,10 @@ Steps to reproduce the behavior:
 A clear and concise description of what you expected to happen.
 
 **Environment (please complete the following information):**
-- Version: <!-- project version or commit hash -->
-- Platform OS: <!-- e.g. Linux/MacOS/Windows + version -->
-- Node version: <!-- `node --version` -->
-- NPM version: <!-- `npm --version` -->
+  - Version: <!-- project version or commit hash -->
+  - Platform OS: <!-- e.g. Linux/MacOS/Windows + version -->
+  - Node version: <!-- `node --version` -->
+  - NPM version: <!-- `npm --version` -->
 
 ## Stacktrace
 ```

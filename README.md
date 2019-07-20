@@ -14,10 +14,10 @@ A simple webpage for displaying a collection of links. Each link can have an opt
 For a live demo, you can visit [uberpage.schreck.berlin](https://uberpage.schreck.berlin), for which this project was created initially.
 
 ## How to Use
-* Fill `data.js` with your items. See about possible configuration in the next paragraph.
-* Put the necessary images in appropriate quality at `public/img`. Reference them in the `data.js` by filename only, not including the path.
-* Deploy on somewhere. I've included a guide for hosting it on [AWS](DEPLOY_ON_AWS.md).
-* Done.
+  * Fill `data.js` with your items. See about possible configuration in the next paragraph.
+  * Put the necessary images in appropriate quality at `public/img`. Reference them in the `data.js` by filename only, not including the path.
+  * Deploy on somewhere. I've included a guide for hosting it on [AWS](DEPLOY_ON_AWS.md).
+  * Done.
 
 ### Possible Configuration Values for an Item
 `data.js`: 
@@ -42,10 +42,10 @@ For a live demo, you can visit [uberpage.schreck.berlin](https://uberpage.schrec
 ```
 
 The effect of the background configuration values is as follows (from top to bottom):
-* `title` (or `description` on hover)
-* `background_logo`
-* `background_picture`
-* `background_color`
+  * `title` (or `description` on hover)
+  * `background_logo`
+  * `background_picture`
+  * `background_color`
 
 This means if both `background_logo` and `background_picture` are set, that the logo will cover parts of the picture.
 Additionally, if a `title` is set, it with have a darkening effect on whatever is underneath to make it more readable.
@@ -56,9 +56,9 @@ Additionally, if a `title` is set, it with have a darkening effect on whatever i
 ## Acknowledgements
 
 ### Third Party Stuff
-* [React](https://reactjs.org/)
-* [Nova Square font](https://fonts.google.com/specimen/Nova+Square)
-* [Bungee Hairline font](https://fonts.google.com/specimen/Bungee+Hairline)
+  * [React](https://reactjs.org/)
+  * [Nova Square font](https://fonts.google.com/specimen/Nova+Square)
+  * [Bungee Hairline font](https://fonts.google.com/specimen/Bungee+Hairline)
 
 ## Why this Name?
 Obviously there is no connection to any mobility provider. The word "uber" is taken from the German word "über", meaning "over", "above" or "on top". As this project is meant to act as an overview page for multiple other pages via linking, this name can be taken literally.
