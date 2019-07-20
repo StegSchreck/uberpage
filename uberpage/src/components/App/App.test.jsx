@@ -13,9 +13,9 @@ describe('App Component', () => {
 
   it('renders at least default tile if data contains no items', () => {
     data.default = {
-      "items": [],
-      "settings": {
-        "default_link_target": "_blank"
+      items: [],
+      settings: {
+        'default_link_target': '_blank'
       }
     };
 
@@ -30,9 +30,9 @@ describe('App Component', () => {
 
   it('renders 4 tiles in 2 columns if data contains 3 items', () => {
     data.default = {
-      "items": [{title: "item1"}, {title: "item2"}, {title: "item3"}],
-      "settings": {
-        "default_link_target": "_blank"
+      items: [{title: 'item1'}, {title: 'item2'}, {title: 'item3'}],
+      settings: {
+        'default_link_target': '_blank'
       }
     };
 
@@ -49,9 +49,9 @@ describe('App Component', () => {
 
   it('renders 3 tiles in 1 column if data contains 2 items', () => {
     data.default = {
-      "items": [{title: "item1"}, {title: "item2"}],
-      "settings": {
-        "default_link_target": "_blank"
+      items: [{title: 'item1'}, {title: 'item2'}],
+      settings: {
+        'default_link_target': '_blank'
       }
     };
 
@@ -67,9 +67,9 @@ describe('App Component', () => {
 
   it('renders 9 tiles in 3 column if data contains 8 items', () => {
     data.default = {
-      "items": [{title: "item1"}, {title: "item2"}, {title: "item3"}, {title: "item4"}, {title: "item5"}, {title: "item6"}, {title: "item7"}, {title: "item8"}],
-      "settings": {
-        "default_link_target": "_blank"
+      items: [{title: 'item1'}, {title: 'item2'}, {title: 'item3'}, {title: 'item4'}, {title: 'item5'}, {title: 'item6'}, {title: 'item7'}, {title: 'item8'}],
+      settings: {
+        'default_link_target': '_blank'
       }
     };
 
@@ -91,9 +91,9 @@ describe('App Component', () => {
 
   it('renders 7 tiles in 2 column if data contains 6 items', () => {
     data.default = {
-      "items": [{title: "item1"}, {title: "item2"}, {title: "item3"}, {title: "item4"}, {title: "item5"}, {title: "item6"}],
-      "settings": {
-        "default_link_target": "_blank"
+      items: [{title: 'item1'}, {title: 'item2'}, {title: 'item3'}, {title: 'item4'}, {title: 'item5'}, {title: 'item6'}],
+      settings: {
+        default_link_target: '_blank'
       }
     };
 

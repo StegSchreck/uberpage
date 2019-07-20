@@ -21,6 +21,10 @@
     "react"
   ],
   "rules": {
+    "max-line-length": [
+      true,
+      140
+    ]
   },
   "overrides": [{
     "files": [ "serviceWorker.js" ],

@@ -5,11 +5,11 @@ import data from '../../data';
 
 function App() {
   const defaultItem = {
-    "link": "https://github.com/StegSchreck/uberpage",
-    "title": "About this page",
-    "description": "This page was created using the UberPage project.",
-    "background_logo": 'UberPage.png',
-    "background_logo_size": "75%"
+    link: 'https://github.com/StegSchreck/uberpage',
+    title: 'About this page',
+    description: 'This page was created using the UberPage project.',
+    background_logo: 'UberPage.png',
+    background_logo_size: '75%',
   };
   data.items.push(defaultItem);
 
@@ -37,13 +37,15 @@ function App() {
     <div className="App" style={gridStyle}>
       {
         data.items.map((item, index) => {
-          const gridColumnStart = index % numberOfColumns + 1;
-          const gridRow = Math.floor(index / numberOfColumns + 1);
+          const gridColumnStart = (index % numberOfColumns) + 1;
+          const gridRow = Math.floor((index / numberOfColumns) + 1);
           const isLastItem = index + 1 === data.items.length;
           // console.log(`index=${index} ${isLastItem}`);
           const gridColumnEnd = isLastItem ? gridColumnStart + (emptySlots + 1) : gridColumnStart + 1;
           itemWidth = isLastItem ? itemWidth * (emptySlots + 1) : itemWidth;
-          return <UberTile key={index} item={item} settings={data.settings} height={itemHeight} width={itemWidth} gridColumnStart={gridColumnStart} gridColumnEnd={gridColumnEnd} gridRow={gridRow}/>;
+          return <UberTile key={index} item={item} settings={data.settings}
+                           height={itemHeight} width={itemWidth}
+                           gridColumnStart={gridColumnStart} gridColumnEnd={gridColumnEnd} gridRow={gridRow} />;
         })
       }
     </div>
