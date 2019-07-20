@@ -43,16 +43,18 @@ function App() {
           // console.log(`index=${index} ${isLastItem}`);
           const gridColumnEnd = isLastItem ? gridColumnStart + (emptySlots + 1) : gridColumnStart + 1;
           itemWidth = isLastItem ? itemWidth * (emptySlots + 1) : itemWidth;
-          return (<UberTile
-            key={index}
-            item={item}
-            settings={data.settings}
-            height={itemHeight}
-            width={itemWidth}
-            gridColumnStart={gridColumnStart}
-            gridColumnEnd={gridColumnEnd}
-            gridRow={gridRow}
-          />);
+          return (
+            <UberTile
+              key={index}
+              item={item}
+              settings={data.settings}
+              height={itemHeight}
+              width={itemWidth}
+              gridColumnStart={gridColumnStart}
+              gridColumnEnd={gridColumnEnd}
+              gridRow={gridRow}
+            />
+          );
         })
       }
     </div>

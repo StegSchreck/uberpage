@@ -42,8 +42,8 @@ class UberTile extends React.Component {
       fontSize: `${itemHeight / 5}vh`,
     };
 
-    if (item.background_color) {backgroundImageStyle.backgroundColor = item.background_color;}
-    if (item.text_color) {textStyle.color = item.text_color;}
+    if (item.background_color) { backgroundImageStyle.backgroundColor = item.background_color; }
+    if (item.text_color) { textStyle.color = item.text_color; }
     if (item.background_logo) {
       backgroundImageStyle.backgroundImage = `url(/img/${item.background_logo})`;
       backgroundImageStyle.backgroundSize = item.background_logo_size ? item.background_logo_size : '50%';
@@ -59,7 +59,7 @@ class UberTile extends React.Component {
       const backgroundSizeSuffix = item.background_picture_size ? item.background_picture_size : 'cover';
       backgroundImageStyle.backgroundSize = `${backgroundSizePrefix}${backgroundSizeSuffix}`;
     }
-    if (item.title && item.background_logo) {backgroundImageStyle.opacity = '0.2';}
+    if (item.title && item.background_logo) { backgroundImageStyle.opacity = '0.2'; }
 
     // console.log(`item ${this.props.key} -> c=${this.props.gridColumnStart} r=${this.props.gridRow}`);
 
