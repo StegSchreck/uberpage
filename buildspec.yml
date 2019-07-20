@@ -9,7 +9,9 @@ phases:
   pre_build:
     commands:
       - echo Installing source NPM dependencies...
-      - cd uberpage
+      - cd uberpage/src
+      - cp -f data.aws.js data.js
+      - cd ..
       - npm install
   build:
     commands:
