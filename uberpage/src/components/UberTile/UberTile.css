@@ -42,5 +42,5 @@
   filter: brightness(120%);
   box-shadow: 0 0 8px 5px rgba(0, 0, 0, 0.2);
   z-index: 1000;
-  transform: scale(1.1);
+  transform: scale(1.02);
 }
