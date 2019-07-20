@@ -9,6 +9,7 @@ phases:
   pre_build:
     commands:
       - echo Installing source NPM dependencies...
+      - cd uberspace
       - npm install
   build:
     commands:
