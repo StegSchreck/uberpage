@@ -42,24 +42,24 @@ class UberTile extends React.Component {
       fontSize: `${itemHeight / 5}vh`,
     };
 
-    if (item.background_color) {backgroundImageStyle['backgroundColor'] = item.background_color;}
-    if (item.text_color) {textStyle['color'] = item.text_color;}
+    if (item.background_color) {backgroundImageStyle.backgroundColor = item.background_color;}
+    if (item.text_color) {textStyle.color = item.text_color;}
     if (item.background_logo) {
-      backgroundImageStyle['backgroundImage'] = 'url(/img/' + item.background_logo + ')';
-      backgroundImageStyle['backgroundSize'] = item.background_logo_size ? item.background_logo_size : '50%';
+      backgroundImageStyle.backgroundImage = `url(/img/'${item.background_logo}')`;
+      backgroundImageStyle.backgroundSize = item.background_logo_size ? item.background_logo_size : '50%';
     }
     if (item.background_picture) {
       let backgroundImagePrefix = '';
       let backgroundSizePrefix = '';
       if (item.background_logo) {
-        backgroundImagePrefix = `${backgroundImageStyle['backgroundImage']}, `;
-        backgroundSizePrefix = `${backgroundImageStyle['backgroundSize']}, `;
+        backgroundImagePrefix = `${backgroundImageStyle.backgroundImage}, `;
+        backgroundSizePrefix = `${backgroundImageStyle.backgroundSize}, `;
       }
-      backgroundImageStyle['backgroundImage'] = `${backgroundImagePrefix}url(/img/${item.background_picture})`;
+      backgroundImageStyle.backgroundImage = `${backgroundImagePrefix}url(/img/${item.background_picture})`;
       const backgroundSizeSuffix = item.background_picture_size ? item.background_picture_size : 'cover';
-      backgroundImageStyle['backgroundSize'] = `${backgroundSizePrefix}${backgroundSizeSuffix}`;
+      backgroundImageStyle.backgroundSize = `${backgroundSizePrefix}${backgroundSizeSuffix}`;
     }
-    if (item.title && item.background_logo) {backgroundImageStyle['opacity'] = '0.2';}
+    if (item.title && item.background_logo) {backgroundImageStyle.opacity = '0.2';}
 
     // console.log(`item ${this.props.key} -> c=${this.props.gridColumnStart} r=${this.props.gridRow}`);
 
@@ -68,7 +68,7 @@ class UberTile extends React.Component {
     return (
       <div className="UberTile" style={tileStyle}>
         <a className="UberTile-link" href={item.link} title={item.description} target={settings.default_link_target}>
-          <div className="UberTile-background-image" style={backgroundImageStyle}/>
+          <div className="UberTile-background-image" style={backgroundImageStyle} />
           <div className="UberTile-text" style={textStyle}><span>{item.title}</span></div>
         </a>
       </div>
