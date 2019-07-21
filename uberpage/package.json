@@ -4,7 +4,7 @@
   "license": "AGPL-3.0-or-later",
   "author": "Sebastian Schreck",
   "private": true,
-  "homepage": "asd",
+  "homepage": "https://stegschreck.github.io",
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
