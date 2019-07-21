@@ -33,7 +33,7 @@ class UberTile extends React.Component {
       ...heightStyle,
       ...gridStyle,
     };
-    const textStyle = {
+    const titleStyle = {
       ...widthStyle,
       ...heightStyle,
       ...gridStyle,
@@ -41,9 +41,17 @@ class UberTile extends React.Component {
       marginTop: `-${itemHeight}vh`,
       fontSize: `${itemHeight / 5}vh`,
     };
+    const descriptionStyle = {
+      ...widthStyle,
+      ...heightStyle,
+      ...gridStyle,
+      lineHeight: `${itemHeight}vh`,
+      marginTop: `-${itemHeight}vh`,
+      fontSize: `${itemHeight / 10}vh`,
+    };
 
     if (item.background_color) { backgroundImageStyle.backgroundColor = item.background_color; }
-    if (item.text_color) { textStyle.color = item.text_color; }
+    if (item.text_color) { titleStyle.color = item.text_color; }
     if (item.background_logo) {
       backgroundImageStyle.backgroundImage = `url(/img/${item.background_logo})`;
       backgroundImageStyle.backgroundSize = item.background_logo_size ? item.background_logo_size : '50%';
@@ -61,21 +69,13 @@ class UberTile extends React.Component {
     }
     if (item.title && (item.background_logo || item.background_picture)) { backgroundImageStyle.opacity = '0.2'; }
 
-    // TODO - show item description as overlay
-
     return (
       <div className={`UberTile${item.link ? ' withLink' : ''}`} style={tileStyle}>
-        {item.link ? (
-          <a className="UberTile-link" href={item.link} title={item.description} target={settings.default_link_target}>
-            <div className="UberTile-background-image" style={backgroundImageStyle} />
-            <div className="UberTile-text" style={textStyle}><span>{item.title}</span></div>
-          </a>
-        ) : (
-          <span>
-            <div className="UberTile-background-image" style={backgroundImageStyle} />
-            <div className="UberTile-text" style={textStyle}><span>{item.title}</span></div>
-          </span>
-        )}
+        <a className="UberTile-link" {... item.link ? {href: item.link} : {}} target={settings.default_link_target}>
+          <div className="UberTile-background-image" style={backgroundImageStyle} />
+          {item.description && <div className="UberTile-description" style={descriptionStyle}><span>{item.description}</span></div>}
+          <div className="UberTile-title" style={titleStyle}><span>{item.title}</span></div>
+        </a>
       </div>
     );
   }
