@@ -61,8 +61,6 @@ class UberTile extends React.Component {
     }
     if (item.title && (item.background_logo || item.background_picture)) { backgroundImageStyle.opacity = '0.2'; }
 
-    // console.log(`item ${this.props.key} -> c=${this.props.gridColumnStart} r=${this.props.gridRow}`);
-
     // TODO - show item description as overlay
 
     return (

@@ -13,13 +13,11 @@ function App() {
   };
   if (data.settings.default_item === undefined || data.settings.default_item) { data.items.push(defaultItem); }
 
-  // TODO - set max number of columns depending on viewport width
-
   function calculateNumberOfColumns() {
-    if (data.items.length <= 3) {
+    if (data.items.length <= 3 || window.innerWidth < 400) {
       return 1;
     }
-    if (data.items.length <= 8) {
+    if (data.items.length <= 8 || window.innerWidth < 800) {
       return 2;
     }
     return 3;
@@ -31,7 +29,6 @@ function App() {
   let itemWidth = 100 / numberOfColumns;
   const gridStyle = { gridTemplateColumns: 'auto '.repeat(numberOfColumns) };
   const emptySlots = (numberOfColumns * numberOfRows) - data.items.length;
-  // console.log(`${data.items.length} items -> c=${numberOfColumns} r=${numberOfRows} -> ${emptySlots} empty slots   #   ${JSON.stringify(gridStyle)}`);
 
   return (
     <div className="App" style={gridStyle}>
@@ -40,7 +37,6 @@ function App() {
           const gridColumnStart = (index % numberOfColumns) + 1;
           const gridRow = Math.floor((index / numberOfColumns) + 1);
           const isLastItem = index + 1 === data.items.length;
-          // console.log(`index=${index} ${isLastItem}`);
           const gridColumnEnd = isLastItem ? gridColumnStart + (emptySlots + 1) : gridColumnStart + 1;
           itemWidth = isLastItem ? itemWidth * (emptySlots + 1) : itemWidth;
           return (
