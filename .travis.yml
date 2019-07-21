@@ -11,6 +11,7 @@ script:
 - npm run lint
 - npm test -- --coverage
 - cp -f src/data.github.js src/data.js
+- sed -i -e 's+"homepage".*$+"homepage": "https://stegschreck.github.io",+g' package.json
 - npm run build
 after_script:
 - codacy-coverage < coverage/lcov.info
