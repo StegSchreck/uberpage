@@ -16,7 +16,7 @@ For a live demo, you can visit [uberpage.schreck.berlin](https://uberpage.schrec
 ## How to Use
 * Fill `data.js` with your items. See about possible configuration in the next paragraph.
 * Put the necessary images in appropriate quality at `public/img`. Reference them in the `data.js` by filename only, not including the path. I suggest using SVG files which offer better scalability.
-* Deploy on somewhere. I've included a guide for hosting it on [AWS](DEPLOY_ON_AWS.md) or as [GitHub user page](DEPLOY_ON_GITHUB_PAGES.md).
+* Deploy on somewhere. I've included some guides below.
 * Done.
 
 ### Possible Configuration Values for an Item
@@ -49,6 +49,11 @@ The effect of the background configuration values is as follows (from top to bot
 
 This means if both `background_logo` and `background_picture` are set, that the logo will cover parts of the picture.
 Additionally, if a `title` is set, it with have a darkening effect on whatever is underneath to make it more readable.
+
+### Deployment
+* [AWS](DEPLOY_ON_AWS.md)
+* [GitHub user page](DEPLOY_ON_GITHUB_PAGES.md)
+* [Uberpsace](DEPLOY_ON_UBERSPACE.md)
 
 ## Acknowledgements
 
