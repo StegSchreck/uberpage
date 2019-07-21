@@ -3,7 +3,7 @@ export default {
     {
       link: 'https://github.com/StegSchreck',
       text_color: '#FFFFFF',
-      description: 'My open source projects on GitHub',
+      description: 'My profile page on GitHub',
       background_logo: 'GitHub_white.svg',
       background_color: '#000000',
     },
@@ -56,6 +56,6 @@ export default {
   ],
   settings: {
     default_link_target: '_blank',
-    default_item: 'true',
+    default_item: false,
   },
 };

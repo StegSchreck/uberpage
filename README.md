@@ -15,7 +15,7 @@ For a live demo, you can visit [uberpage.schreck.berlin](https://uberpage.schrec
 
 ## How to Use
 * Fill `data.js` with your items. See about possible configuration in the next paragraph.
-* Put the necessary images in appropriate quality at `public/img`. Reference them in the `data.js` by filename only, not including the path.
+* Put the necessary images in appropriate quality at `public/img`. Reference them in the `data.js` by filename only, not including the path. I suggest using SVG files which offer better scalability.
 * Deploy on somewhere. I've included a guide for hosting it on [AWS](DEPLOY_ON_AWS.md) or as [GitHub user page](DEPLOY_ON_GITHUB_PAGES.md).
 * Done.
 

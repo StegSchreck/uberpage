@@ -9,13 +9,24 @@ export default {
     },
     {
       link: 'https://cv.schreck.berlin',
-      description: 'Angular based online-CV',
+      description: 'View my CV',
       background_logo: 'AngularCV_white_transparent.svg',
       background_logo_size: 'contain',
       background_picture: 'cover.jpg',
       background_picture_size: 'cover',
       background_color: '#FFFFFF',
     },
+    {
+      link: 'https://medium.com/@stegschreck',
+      background_logo: 'Medium.svg',
+      background_color: '#FFFFFF',
+    },
+    // {
+    //   link: 'https://twitter.com/StegSchreck',
+    //   background_logo: 'Twitter.svg',
+    //   background_logo_size: 'contain',
+    //   background_color: '#1DA1F2',
+    // },
   ],
   settings: {
     default_link_target: '_blank',
