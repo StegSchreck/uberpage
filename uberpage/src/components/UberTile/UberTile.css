@@ -27,7 +27,7 @@
 }
 
 .UberTile-background-image {
-  filter: brightness(80%);
+  filter: brightness(90%);
 }
 
 .UberTile-description > span,
@@ -41,7 +41,7 @@
 }
 
 .UberTile-description {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   display: none;
 }
 
