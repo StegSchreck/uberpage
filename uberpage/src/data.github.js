@@ -22,7 +22,7 @@ export default {
     {
       link: 'https://github.com/StegSchreck/uberpage',
       text_color: '#FFFFFF',
-      description: 'Python script for syncing movie ratings',
+      description: 'React based overview page for several links',
       background_logo: 'UberPage_white.svg',
       background_color: '#4A86E8',
     },
