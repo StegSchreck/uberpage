@@ -33,12 +33,12 @@ In order to deploy UberPage to Uberspace, you will have to perform the following
         
         source ~/.bash_profile
   
-        pushd ~/AngularCV
+        pushd ~/uberpage/uberpage
         
         git co -- .   # ignore local changes
         git pull      # get the new stuff
         npm install   # install changes made to package.json
-        sed -i -e 's#"homepage".*$#"homepage": "<YOUR_DOMAIN>",#g' package.json # add domain where this is deployed, e.g. https://example.com
+        ../scripts/adjust_homepage.sh "<YOUR_DOMAIN>" # add domain where this is deployed, e.g. https://example.com
         npm run build  # build the app for production environment
         rm -rf ~/html/*
         cp -r build/* ~/html/
