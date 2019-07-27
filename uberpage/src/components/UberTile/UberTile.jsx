@@ -39,7 +39,7 @@ class UberTile extends React.Component {
       ...gridStyle,
       lineHeight: `${itemHeight}vh`,
       marginTop: `-${itemHeight}vh`,
-      fontSize: `${itemHeight / 5}vh`,
+      fontSize: `${itemHeight / 7}vh`,
     };
     const descriptionStyle = {
       ...widthStyle,
@@ -47,7 +47,7 @@ class UberTile extends React.Component {
       ...gridStyle,
       lineHeight: `${itemHeight}vh`,
       marginTop: `-${itemHeight}vh`,
-      fontSize: `${itemHeight / 10}vh`,
+      fontSize: `${itemHeight / 15}vh`,
     };
 
     if (item.background_color) { backgroundImageStyle.backgroundColor = item.background_color; }
