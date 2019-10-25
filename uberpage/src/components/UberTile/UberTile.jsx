@@ -71,7 +71,7 @@ class UberTile extends React.Component {
 
     return (
       <div className={`UberTile${item.link ? ' withLink' : ''}`} style={tileStyle}>
-        <a className="UberTile-link" {... item.link ? {href: item.link} : {}} target={settings.default_link_target}>
+        <a className="UberTile-link" {... item.link ? {href: item.link} : {}} target={settings.default_link_target} rel="noreferrer">
           <div className="UberTile-background-image" style={backgroundImageStyle} />
           {item.description && <div className="UberTile-description" style={descriptionStyle}><span>{item.description}</span></div>}
           <div className="UberTile-title" style={titleStyle}><span>{item.title}</span></div>
