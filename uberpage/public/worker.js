@@ -1,10 +1,10 @@
 const CACHE_NAME = 'pwa-task-manager';
 const urlsToCache = ['/', '/completed'];
+const self = this;
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log('Opened cache');
       return cache.addAll(urlsToCache);
     }),
   );
@@ -29,6 +29,7 @@ self.addEventListener('activate', (event) => {
         if (cacheWhitelist.indexOf(cacheName) === -1) {
           return caches.delete(cacheName);
         }
+        return null;
       }),
     )),
   );
