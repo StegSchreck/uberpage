@@ -1,7 +1,7 @@
 {
-  "name": "Progressive TxtToSL Web App",
-  "short_name": "start PWA",
-  "description": "Translates text into sign language.",
+  "name": "Progressive Uberpage",
+  "short_name": "Uberpage",
+  "description": "Overview page for various links as tiles",
   "start_url": "./index.html",
   "display": "standalone",
   "orientation": "portrait",
