@@ -1,15 +1,44 @@
 {
-  "short_name": "UBERPAGE",
-  "name": "UberPage",
+  "name": "Progressive TxtToSL Web App",
+  "short_name": "start PWA",
+  "description": "Translates text into sign language.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f5f5f5",
+  "theme_color": "#29434d",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "ico/icon_48.png",
+          "type": "image/png",
+          "sizes": "48x48"
+    },
+    {
+      "src": "ico/icon_72.png",
+      "type": "image/png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "ico/icon_96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "ico/icon_144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "ico/icon_192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "ico/icon_512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "gcm_sender_id": "847244732742",
+  "gcm_user_visible_only": true
 }
