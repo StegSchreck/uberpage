@@ -21,8 +21,8 @@
     "react"
   ],
   "rules": {
-    "max-line-length": [
-      true,
+    "max-len": [
+      "error",
       140
     ]
   },
