@@ -6,9 +6,9 @@
   "private": true,
   "homepage": "https://stegschreck.github.io",
   "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-scripts": "^3.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -35,11 +35,11 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
+    "eslint": "^6.6.0",
     "eslint-config-airbnb": "^17.1.1",
-    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-import": "^2.19.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.14.2",
-    "gh-pages": "^2.0.1"
+    "eslint-plugin-react": "^7.17.0",
+    "gh-pages": "^2.1.1"
   }
 }
