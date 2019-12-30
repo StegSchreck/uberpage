@@ -1,0 +1,74 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 11.x, 12.x, 13.x]
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: npm install, build, and test
+      run: |
+        npm install -g npm@latest
+        npm ci
+        npm run lint
+        npm test
+        cp -f src/data.github.js src/data.js
+        ../scripts/adjust_homepage.sh "https://stegschreck.github.io"
+        npm run build
+      env:
+        CI: true
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v1
+    - name: GitHub Pages Deploy
+      uses: crazy-max/ghaction-github-pages@v1.2.5
+      if: success() && github.ref == 'master'
+      with:
+        # GitHub repository where assets will be deployed (default current)
+        repo: StegSchreck/stegschreck.github.io
+        # Git branch where assets will be deployed
+        target_branch: master
+        # Create incremental commit instead of doing push force
+        keep_history: true
+        # Build directory to deploy
+        build_dir: build
+        # Write the given domain name to the CNAME file
+        fqdn: stegschreck.github.io
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v1
+    - name: Create Release
+      if: success() && startsWith(github.ref, 'refs/tags/')
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        body: commits[0][message]
+        draft: false
+        prerelease: false
