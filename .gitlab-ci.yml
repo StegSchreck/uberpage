@@ -24,8 +24,8 @@ pages:
     - ../scripts/adjust_homepage.sh "https://stegschreck.gitlab.io"
     - cp -f src/data.gitlab.js src/data.js
     - CI=true npm run build
-    - rm -rf public
-    - mv build public
+    - rm -rf ../public
+    - mv build ../public
   artifacts:
     paths:
       - public # GitLab pages serve from a 'public' directory
