@@ -18,16 +18,12 @@ test:
   script:
     - CI=true npm run test
 
-build:
-  stage: build
+pages:
+  stage: deploy
   script:
     - ../scripts/adjust_homepage.sh "https://stegschreck.gitlab.io"
     - cp -f src/data.gitlab.js src/data.js
     - CI=true npm run build
-
-pages:
-  stage: deploy
-  script:
     - rm -rf public
     - mv build public
   artifacts:
