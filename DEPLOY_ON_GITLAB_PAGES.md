@@ -15,12 +15,12 @@ Assuming you want to use this for a user GitLab Page and not a project GitLab Pa
 
 At GitLab create a repository named `<YourGitLabUserName>.gitlab.io` (or fork this repository into a new repository with that name in your namespace). After cloning this repository locally, you can set that as the new remote repository.
 
-### Step 1: Adjust the `.gitlab-ci.yaml` and `package.json` configuration
-In the `.gitlab-ci.yaml`, adjust the following:
+### Step 1: Adjust the `.gitlab-ci.yml` and `package.json` configuration
+In the `.gitlab-ci.yml`, adjust the following:
 * in the section pages.script put `<YourGitLabUserName>.gitlab.io` after `../scripts/adjust_homepage.sh`
 You could also remove that line there and directly put it in the `uberpage/package.json` by adjust the following setting:
 * At `hostname` put the value `<YourGitLabUserName>.gitlab.io`
 
 
 ### Step 2: Deploy
-Just push the content of your fork/clone directly to the newly created repository. The `.gitlab-ci.yaml` will take care of the rest. (You have to make sure GitLab CI runners are enabled, which they should by default)
+Just push the content of your fork/clone directly to the newly created repository. The `.gitlab-ci.yml` will take care of the rest. (You have to make sure GitLab CI runners are enabled, which they should by default)
