@@ -19,6 +19,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: npm install, build, and test
       run: |
+        cd uberpage
         npm install -g npm@latest
         npm ci
         npm run lint
@@ -47,7 +48,7 @@ jobs:
         # Create incremental commit instead of doing push force
         keep_history: true
         # Build directory to deploy
-        build_dir: build
+        build_dir: uberpage/build
         # Write the given domain name to the CNAME file
         fqdn: stegschreck.github.io
       env:
