@@ -19,20 +19,20 @@ notifications:
   email:
     on_failure: change
     on_success: change
-deploy:
-  - provider: releases
-    api_key:
-      secure: ANlzfolVIa2EOCMpIvrvnh35/RzfJ4d0C7ddezXXkHS50RoscnLQ2+SBYvt7FBW5JtMFmZKUJ1KWjWzXx0maJcLuMMSIOPYQ5tW2U+XetzElBLDLR8DKLxQeEpB8RnFptHnuJGCmaPZkmbVXP0i9ZEZJyB2a1VNEeegg0+S1cp36dEmduOHgEaF3SOApdyxpkZMbtgXYkS2Yh0M+6790bAGgxJ0IGWD1CHwuCcQy8OXhJKQfgUBZLDQvm9EuvbnzWv48Glnvgq5pqVlGjV6UMFoyhQH/YghWwvaazE1vCrr6/dGXO1akjaoMVtX/LKX8h5ZwKV9YwbHrXiQd8kE3obFtE2uIdUR33hhHNx0m3JT7/9Ln/lFo9Q5qzFVgonOtt+PfPYMY2BD9UYpkcvjXYUTSQghIcAJerkpkkdAY3hMjZQUHcH6sEp46A0SYF2F2d8hrR7wMQLkWKjnaS8ThuNfgnilTEjW+H6HoXPqKUl2H+RHS5OdV0uw0atbaTT5p8/hDa0nnOsMc0pqLNPHEh3IadPqKyJAPUYCciMWFgfRZpDiDekjiOyFv2cSAXYs98ARPhAmj6NspxE5i6rIiU7hegL0hQ4QQxzPteWQ5tq+Ldnjj/ezMbGGZ+gXbqFpSDh9v2S9m3a26pPBF3bCyNaURn/qLtRF6wXIXtIsefrg=
-    on:
-      repo: StegSchreck/uberpage
-      tags: true
-  - provider: pages
-    skip_cleanup: true
-    repo: StegSchreck/stegschreck.github.io
-    target_branch: master
-    local_dir: uberpage/build
-    github_token:
-      secure: THtyiGPCi56nKBE6arHjiS1Zy0YiSQOPrQejq2WTx8cWy1T62wDpDHHJ3v77foDBHiARnUE0LRQpncD1VaOdFs720bLAddaJA4+UUz5Jj8dKr/aFIwSRfEnk08P9GnLfLdbhM51GF+lE+ifgpSKtza6h5ybk4WAPsUyBcIKzj5hveGnHBkVnzSiSh6CTPwsH2qKp2KYszT221uqiH0bX8EH2vroWm9l/wT+d3lkViOEL1aMwD+i2fegM6AmedFuX7ucW6Kz15tustBFXwbIAdYeLTEnuPnRVetnx9agY4rRYRkUd29CV+7CDIL4XbD/1pRzGSJs27izvXxqRdq91PxmPcdEqsLOL026EWZOEoRE85qVwd3Ov2W/lcy+Hd0s76vunoBeZKl0ordjyJ2rv+ftLG/xvQDOjyX2i2pam5ec+XtDo4NMuxz0bdx/tEPrKMv25NrVLm9c8Yk4Z5mS9Ho6swe38nT7u2ODkzGkA+2JJogV83FeD9Ysu5A1UvhzkkaLkvqSDLmcTxFW5RwV5cNIOKU+x7AyFehY9DNS17LkLooN8hUJIKJ9miP1wBeLu4b8XceBEmij6dvu+nORV+Ng+XYzRv9BTMHTG5Ww0wLURgZi/s7fURqYhu/PqvqnV2P0eeC/7pY9x3gaL0qIEH/5eB7ZvDnTT+Cxgh+mt0hA=
-    keep_history: true
-    on:
-      branch: master
+#deploy:
+#  - provider: releases
+#    api_key:
+#      secure: ANlzfolVIa2EOCMpIvrvnh35/RzfJ4d0C7ddezXXkHS50RoscnLQ2+SBYvt7FBW5JtMFmZKUJ1KWjWzXx0maJcLuMMSIOPYQ5tW2U+XetzElBLDLR8DKLxQeEpB8RnFptHnuJGCmaPZkmbVXP0i9ZEZJyB2a1VNEeegg0+S1cp36dEmduOHgEaF3SOApdyxpkZMbtgXYkS2Yh0M+6790bAGgxJ0IGWD1CHwuCcQy8OXhJKQfgUBZLDQvm9EuvbnzWv48Glnvgq5pqVlGjV6UMFoyhQH/YghWwvaazE1vCrr6/dGXO1akjaoMVtX/LKX8h5ZwKV9YwbHrXiQd8kE3obFtE2uIdUR33hhHNx0m3JT7/9Ln/lFo9Q5qzFVgonOtt+PfPYMY2BD9UYpkcvjXYUTSQghIcAJerkpkkdAY3hMjZQUHcH6sEp46A0SYF2F2d8hrR7wMQLkWKjnaS8ThuNfgnilTEjW+H6HoXPqKUl2H+RHS5OdV0uw0atbaTT5p8/hDa0nnOsMc0pqLNPHEh3IadPqKyJAPUYCciMWFgfRZpDiDekjiOyFv2cSAXYs98ARPhAmj6NspxE5i6rIiU7hegL0hQ4QQxzPteWQ5tq+Ldnjj/ezMbGGZ+gXbqFpSDh9v2S9m3a26pPBF3bCyNaURn/qLtRF6wXIXtIsefrg=
+#    on:
+#      repo: StegSchreck/uberpage
+#      tags: true
+#  - provider: pages
+#    skip_cleanup: true
+#    repo: StegSchreck/stegschreck.github.io
+#    target_branch: master
+#    local_dir: uberpage/build
+#    github_token:
+#      secure: THtyiGPCi56nKBE6arHjiS1Zy0YiSQOPrQejq2WTx8cWy1T62wDpDHHJ3v77foDBHiARnUE0LRQpncD1VaOdFs720bLAddaJA4+UUz5Jj8dKr/aFIwSRfEnk08P9GnLfLdbhM51GF+lE+ifgpSKtza6h5ybk4WAPsUyBcIKzj5hveGnHBkVnzSiSh6CTPwsH2qKp2KYszT221uqiH0bX8EH2vroWm9l/wT+d3lkViOEL1aMwD+i2fegM6AmedFuX7ucW6Kz15tustBFXwbIAdYeLTEnuPnRVetnx9agY4rRYRkUd29CV+7CDIL4XbD/1pRzGSJs27izvXxqRdq91PxmPcdEqsLOL026EWZOEoRE85qVwd3Ov2W/lcy+Hd0s76vunoBeZKl0ordjyJ2rv+ftLG/xvQDOjyX2i2pam5ec+XtDo4NMuxz0bdx/tEPrKMv25NrVLm9c8Yk4Z5mS9Ho6swe38nT7u2ODkzGkA+2JJogV83FeD9Ysu5A1UvhzkkaLkvqSDLmcTxFW5RwV5cNIOKU+x7AyFehY9DNS17LkLooN8hUJIKJ9miP1wBeLu4b8XceBEmij6dvu+nORV+Ng+XYzRv9BTMHTG5Ww0wLURgZi/s7fURqYhu/PqvqnV2P0eeC/7pY9x3gaL0qIEH/5eB7ZvDnTT+Cxgh+mt0hA=
+#    keep_history: true
+#    on:
+#      branch: master
