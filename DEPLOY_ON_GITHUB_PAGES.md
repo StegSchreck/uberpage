@@ -15,7 +15,7 @@ Assuming you want to use this for a user GitHub Page and not a project GitHub Pa
 
 At GitHub create a repository named `<YourGitHubUserName>.github.io`.
 
-### Step 1: Adjust the `package.json configuration`
+### Step 1: Adjust the `package.json` configuration
 In the `uberpage/package.json` adjust the following settings:
 * At `hostname` put the value `<YourGitHubUserName>.github.io`
 * At `scripts.deploy` adjust the value for the repository with `git@github.com:<YourGitHubUserName>/<YourGitHubUserName>.github.io.git`

@@ -1,0 +1,33 @@
+image: node:13.3.0 # change to match your node version
+
+cache:
+  paths:
+    - uberpage/node_modules/
+
+before_script:
+  - cd uberpage
+  - npm install
+
+lint:
+  stage: verify
+  script:
+    - CI=true npm run lint
+
+test:
+  stage: verify
+  script:
+    - CI=true npm test
+
+pages:
+  stage: deploy
+  script:
+    - ../scripts/adjust_homepage.sh "https://stegschreck.gitlab.io"
+    - cp -f src/data.gitlab.js src/data.js
+    - CI=true npm run build
+    - rm -rf public
+    - mv build public
+  artifacts:
+    paths:
+      - public # GitLab pages serve from a 'public' directory
+  only:
+    - master # run on master branch
