@@ -39,7 +39,7 @@ jobs:
       uses: actions/checkout@v1
     - name: GitHub Pages Deploy
       uses: crazy-max/ghaction-github-pages@v1.2.5
-      if: success() && github.ref == 'master'
+      if: success() && github.ref == 'refs/heads/master'
       with:
         # GitHub repository where assets will be deployed (default current)
         repo: StegSchreck/stegschreck.github.io
