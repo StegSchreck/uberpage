@@ -53,6 +53,7 @@ Additionally, if a `title` is set, it with have a darkening effect on whatever i
 ### Deployment
 * [AWS](DEPLOY_ON_AWS.md)
 * [GitHub user page](DEPLOY_ON_GITHUB_PAGES.md)
+* [GitLab user page](DEPLOY_ON_GITLAB_PAGES.md)
 * [Uberpsace](DEPLOY_ON_UBERSPACE.md)
 
 ## Acknowledgements

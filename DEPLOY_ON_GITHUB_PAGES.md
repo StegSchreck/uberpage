@@ -32,3 +32,12 @@ The deployment might take a couple of minutes.
 
 ## Automation with Travis
 If you plan to use TravisCI, you can check in this repository how to let it deploy to GitHub Pages after a successful build on the master branch.
+
+## Alternative using GitHub Actions workflow
+If you like to use GitHub Actions, you can check out the `.github/workflows/CI.yml` in this project, which includes:
+- lint the files
+- execute tests
+- build
+- deploy to GitHub Pages (master branch only)
+  In this case I am using a separate repository for the code and the deployed website. You can also configure this to be in the same repo.
+- create a GitHub Release (tags only)
