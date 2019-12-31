@@ -64,7 +64,7 @@ jobs:
         # Build directory to deploy
         build_dir: uberpage/build
         # Write the given domain name to the CNAME file
-        fqdn: #stegschreck.github.io
+        #fqdn: stegschreck.github.io
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
