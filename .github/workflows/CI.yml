@@ -41,7 +41,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 13.x
-    - name: npm install, build, and test
+    - name: npm install and build
       run: |
         cd uberpage
         npm install -g npm@latest
@@ -67,6 +67,7 @@ jobs:
         fqdn: stegschreck.github.io
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
 
   release:
     needs: build
