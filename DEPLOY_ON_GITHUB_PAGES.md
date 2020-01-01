@@ -38,6 +38,6 @@ If you like to use GitHub Actions, you can check out the `.github/workflows/CI.y
 - lint the files
 - execute tests
 - build
+- create a GitHub Release (tags only)
 - deploy to GitHub Pages (master branch only)
   In this case I am using a separate repository for the code and the deployed website. You can also configure this to be in the same repo.
-- create a GitHub Release (tags only)

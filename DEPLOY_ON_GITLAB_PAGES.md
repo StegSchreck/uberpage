@@ -21,6 +21,5 @@ In the `.gitlab-ci.yml`, adjust the following:
 You could also remove that line there and directly put it in the `uberpage/package.json` by adjust the following setting:
 * At `hostname` put the value `<YourGitLabUserName>.gitlab.io`
 
-
 ### Step 2: Deploy
 Just push the content of your fork/clone directly to the newly created repository. The `.gitlab-ci.yml` will take care of the rest. (You have to make sure GitLab CI runners are enabled, which they should by default)
