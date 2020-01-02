@@ -11,7 +11,7 @@ export default {
       link: 'https://gitlab.com/StegSchreck',
       text_color: '#FFFFFF',
       description: 'My profile page on GitLab',
-      background_logo: 'GitLab_white.png',
+      background_logo: 'GitLab_white.svg',
       background_color: '#E24329',
     },
     {
