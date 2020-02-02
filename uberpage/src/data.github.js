@@ -41,6 +41,14 @@ export default {
       background_color: '#E30613',
     },
     {
+      link: 'https://github.com/StegSchreck/is24-price-per-area',
+      text_color: '#FFFFFF',
+      description: 'Chrome extension for displaying the price per m² on ImmobilienScout24 result lists',
+      background_logo: 'is24-price-per-area_white.svg',
+      background_logo_size: '25%',
+      background_color: '#FF7300',
+    },
+    {
       link: 'https://github.com/WiSchLabs/Kicktipper',
       description: 'Calculating tips for football predictions games on Kicktipp',
       background_logo: 'Kicktipper.png',
