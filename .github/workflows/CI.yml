@@ -20,15 +20,17 @@ jobs:
     - name: npm install, build, and test
       run: |
         cd uberpage
-        npm install -g npm@latest
+        npm install -g npm@latest codacy-coverage
         npm ci
         npm run lint
-        npm test
+        npm test -- --coverage
+        codacy-coverage < coverage/lcov.info
         cp -f src/data.github.js src/data.js
         ../scripts/adjust_homepage.sh "https://stegschreck.github.io"
         npm run build
       env:
         CI: true
+        CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
 
   release:
     needs: build
