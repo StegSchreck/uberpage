@@ -6,12 +6,12 @@
 After you forked this project and adjusted it to your needs (configured with your data), you might want to deploy it in order to make it available to everyone.
 
 ## Deployment on Uberspace
-I am using [Uberspace](https://uberspace.de/) for private purposes. This is a lightweight server where you can pay as you like. The recommendation is to pay about 5 - 10 € per month, minimum is 1 € per month. They have a good [wiki](https://wiki.uberspace.de/start) (but only in German so far) for most of the needs you might have.
+I am using [Uberspace](https://uberspace.de/) for private purposes. This is a lightweight server where you can pay as you like. The recommendation is to pay about 5 - 10 € per month, minimum is 1 € per month. They have a good [wiki](https://manual.uberspace.de/) for most of the needs you might have.
 
 In order to deploy UberPage to Uberspace, you will have to perform the following steps:
 1.  Register a domain somewhere
 2.  Register an [Uberspace](https://uberspace.de/) account
-3.  Configure your new domain at your Uberspace, see [their wiki](https://wiki.uberspace.de/domain:verwalten)
+3.  Configure your new domain at your Uberspace, see [their wiki](https://manual.uberspace.de/web-domains.html)
 4.  Configure the newer nodejs version
     ```sh
     echo 'export PATH=/package/host/localhost/nodejs-8/bin:$PATH' >> ~/.bash_profile  # use the newer nodejs version, as this is not the default
@@ -50,7 +50,7 @@ In order to deploy UberPage to Uberspace, you will have to perform the following
         # Deploy UberPage
         @daily ~/bin/deploy_uberpage.sh
         ``` 
-    * see more here about website hosting at the [Uberspace wiki](https://wiki.uberspace.de/start:web)
+    * see more here about website hosting at the [Uberspace wiki](https://manual.uberspace.de/web-documentroot.html)
 6.  In order to make the direct links and browser page refresh work add this content to the new file `~/html/.htaccess`:
     ```
         RewriteEngine on
