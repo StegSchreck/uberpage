@@ -1,13 +1,6 @@
 export default {
   items: [
     {
-      link: 'https://github.com/StegSchreck',
-      text_color: '#FFFFFF',
-      description: 'My profile page on GitHub',
-      background_logo: 'GitHub_white.svg',
-      background_color: '#000000',
-    },
-    {
       link: 'https://gitlab.com/StegSchreck',
       text_color: '#FFFFFF',
       description: 'My profile page on GitLab',
@@ -59,6 +52,13 @@ export default {
       description: 'Django based helper tool for onlinefussballmanager.de',
       background_logo: 'OFM_Helper_sw.png',
       background_color: '#239123',
+    },
+    {
+      link: 'https://github.com/StegSchreck',
+      text_color: '#FFFFFF',
+      description: 'My profile page on GitHub',
+      background_logo: 'GitHub_white.svg',
+      background_color: '#000000',
     },
   ],
   settings: {

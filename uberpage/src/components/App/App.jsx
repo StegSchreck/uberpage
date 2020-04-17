@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import UberPage from "../UberPage/UberPage";
-import data from "../../data";
+import UberPage from '../UberPage/UberPage';
+import data from '../../data';
 
 function App() {
   const defaultItem = {
