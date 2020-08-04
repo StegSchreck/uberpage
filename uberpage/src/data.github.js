@@ -28,6 +28,13 @@ export default {
       background_color: '#FF7300',
     },
     {
+      link: 'https://github.com/StegSchreck/SpringerLinkEBookDownloader',
+      text_color: '#002C5A',
+      description: 'Download eBooks from a given list of Springer Link urls',
+      background_logo: 'SpringerLinkEBookDownloader.svg',
+      background_color: '#F1F1F1',
+    },
+    {
       link: 'https://github.com/StegSchreck/PP-Auxmoney-Parser',
       text_color: '#FFFFFF',
       description: 'Python script for parsing the received interests from Auxmoney to a CSV to be imported to Portfolio Perfomance',
