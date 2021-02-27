@@ -20,10 +20,10 @@ In order to deploy UberPage to Uberspace, you will have to perform the following
 5.  Deploy your UberPage app
     ```sh
     cd ~
-    git clone git@github.com:YoutGithubAccount/uberpage.git
+    git clone git@github.com:YourGithubAccount/uberpage.git
     cd ~/uberpage/uberpage
     npm run build  # build the app for production environment and copy the result to the web root directory
-    cp -r build/* ~/html/
+    cp --recursive build/* ~/html/
     ```
     * (Optional) **Automate the deployment**
       In order to always show the newest version, you can add a cron job to perform the above steps
@@ -35,13 +35,13 @@ In order to deploy UberPage to Uberspace, you will have to perform the following
   
         pushd ~/uberpage/uberpage
         
-        git co -- .   # ignore local changes
+        git checkout -- .   # ignore local changes
         git pull      # get the new stuff
         npm install   # install changes made to package.json
         ../scripts/adjust_homepage.sh "<YOUR_DOMAIN>" # add domain where this is deployed, e.g. https://example.com
         npm run build  # build the app for production environment
-        rm -rf ~/html/*
-        cp -r build/* ~/html/
+        rm --recursive --force ~/html/*
+        cp --recursive build/* ~/html/
         
         popd
         ```
