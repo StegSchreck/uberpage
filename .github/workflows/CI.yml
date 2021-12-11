@@ -8,7 +8,9 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x, 16.x, 17.x]
+        node-version: [10.x, 12.x, 14.x, 16.x]
+        check-latest:
+        - true
 
     steps:
     - name: Checkout code
@@ -59,10 +61,10 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v1
-    - name: Use Node.js 13.x
+    - name: Use Node.js 17.x
       uses: actions/setup-node@v1
       with:
-        node-version: 13.x
+        node-version: 17.x
     - name: Build
       run: |
         cd uberpage
