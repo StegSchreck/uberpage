@@ -37,7 +37,7 @@ export default {
     {
       link: 'https://github.com/StegSchreck/PP-Auxmoney-Parser',
       text_color: '#FFFFFF',
-      description: 'Python script for parsing the received interests from Auxmoney to a CSV to be imported to Portfolio Perfomance',
+      description: 'Python script for parsing the received interests from Auxmoney to a CSV to be imported to Portfolio Performance',
       background_logo: 'PP-Auxmoney-Parser_white.svg',
       background_logo_size: '75%',
       background_color: '#275170',
@@ -45,8 +45,8 @@ export default {
     {
       link: 'https://github.com/StegSchreck/HistoricMarketPriceDownloader',
       text_color: '#FFFFFF',
-      description: 'Python script for parsing all historic market prices of a stock to a CSV to be imported to Portfolio Perfomance',
-      background_logo: 'HistoricMarketPriceDownloader_white.svg',
+      description: 'Python script for parsing all historic market prices of a stock to a CSV to be imported to Portfolio Performance',
+      background_logo: 'HistoricMarketPriceDownloader_white.png',
       background_color: '#009688',
     },
     {
