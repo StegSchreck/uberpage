@@ -43,6 +43,13 @@ export default {
       background_color: '#275170',
     },
     {
+      link: 'https://github.com/StegSchreck/HistoricMarketPriceDownloader',
+      text_color: '#FFFFFF',
+      description: 'Python script for parsing all available historic market prices of a stock from ariva.de to a CSV to be imported to Portfolio Perfomance',
+      background_logo: 'HistoricMarketPriceDownloader_white.svg',
+      background_color: '#009688',
+    },
+    {
       link: 'https://github.com/StegSchreck/AWSreCalendar',
       description: 'Python script for planning my stay at AWS re:Invent 2018',
       background_logo: 'AWSreCalendar.png',
