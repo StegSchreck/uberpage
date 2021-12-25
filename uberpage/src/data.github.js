@@ -45,7 +45,7 @@ export default {
     {
       link: 'https://github.com/StegSchreck/HistoricMarketPriceDownloader',
       text_color: '#FFFFFF',
-      description: 'Python script for parsing all available historic market prices of a stock from ariva.de to a CSV to be imported to Portfolio Perfomance',
+      description: 'Python script for parsing all historic market prices of a stock to a CSV to be imported to Portfolio Perfomance',
       background_logo: 'HistoricMarketPriceDownloader_white.svg',
       background_color: '#009688',
     },
