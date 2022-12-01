@@ -45,7 +45,7 @@ jobs:
     - name: Create Release
       uses: softprops/action-gh-release@v0.1.14
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GHA_PAT }}
 
   deploy:
     needs: build
@@ -84,4 +84,4 @@ jobs:
         #fqdn: stegschreck.github.io
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
+        GITHUB_PAT: ${{ secrets.GHA_PAT }}
