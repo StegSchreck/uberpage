@@ -43,10 +43,19 @@ export default {
       background_color: '#275170',
     },
     {
+      link: 'https://github.com/StegSchreck/PP-Trine-Parser',
+      text_color: '#FFFFFF',
+      description: 'Python script for parsing the received interests from Trine to a CSV to be imported to Portfolio Performance',
+      background_logo: 'PP-Trine-Parser_white.svg',
+      background_logo_size: '75%',
+      background_color: '#54324F',
+    },
+    {
       link: 'https://github.com/StegSchreck/HistoricMarketPriceDownloader',
       text_color: '#FFFFFF',
       description: 'Python script for parsing all historic market prices of a stock to a CSV to be imported to Portfolio Performance',
       background_logo: 'HistoricMarketPriceDownloader_white.png',
+      background_logo_size: '50%',
       background_color: '#009688',
     },
     {
