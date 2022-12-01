@@ -45,7 +45,7 @@ jobs:
     - name: Create Release
       uses: softprops/action-gh-release@v0.1.14
       env:
-        GITHUB_TOKEN: ${{ secrets.GHA_PAT }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   deploy:
     needs: build
@@ -68,20 +68,16 @@ jobs:
         npm run build
       env:
         CI: true
-    - name: GitHub Pages Deploy
-      uses: crazy-max/ghaction-github-pages@v3
-      if: success() && github.ref == 'refs/heads/master'
+    - name: Deploy GitHub Pages site
+      uses: JamesIves/github-pages-deploy-action@v4
+      if: github.ref_name == 'master'
       with:
         # GitHub repository where assets will be deployed (default current)
-        repo: StegSchreck/stegschreck.github.io
+        repository-name: StegSchreck/stegschreck.github.io
         # Git branch where assets will be deployed
-        target_branch: master
-        # Create incremental commit instead of doing push force
-        keep_history: true
+        branch: master
+        # delete files from your deployment destination that no longer exist in your deployment source
+        clean: true
         # Build directory to deploy
-        build_dir: uberpage/build
-        # Write the given domain name to the CNAME file
-        #fqdn: stegschreck.github.io
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        GITHUB_PAT: ${{ secrets.GHA_PAT }}
+        folder: uberpage/build
+        token: ${{ secrets.GHA_PAT }}
