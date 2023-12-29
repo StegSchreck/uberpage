@@ -79,6 +79,12 @@ export default {
       background_color: '#999999',
     },
     {
+      link: 'https://github.com/WiSchLabs/beat-the-host',
+      description: 'This is a Vue3-based game inspired by Schlag den Raab.',
+      background_logo: 'BeatTheHost.png',
+      background_color: '#F19100FF',
+    },
+    {
       link: 'https://github.com/WiSchLabs/ofm_helper',
       text_color: '#FFFFFF',
       description: 'Django based helper tool for onlinefussballmanager.de',
