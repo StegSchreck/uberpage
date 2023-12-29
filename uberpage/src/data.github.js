@@ -82,7 +82,6 @@ export default {
       link: 'https://github.com/WiSchLabs/beat-the-host',
       description: 'This is a Vue3-based game inspired by Schlag den Raab.',
       background_logo: 'BeatTheHost.png',
-      background_color: '#F19100FF',
     },
     {
       link: 'https://github.com/WiSchLabs/ofm_helper',
