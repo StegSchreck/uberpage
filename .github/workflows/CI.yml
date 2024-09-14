@@ -21,7 +21,7 @@ jobs:
     - name: npm install, build, and test
       run: |
         cd uberpage
-        npm ci
+        npm clean-install
         npm run lint
         npm test -- --coverage
         cp -f src/data.github.js src/data.js
@@ -55,15 +55,15 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js latest
       uses: actions/setup-node@v4
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: latest
     - name: Build for GH Page
       run: |
         cd uberpage
         npm install -g npm@latest
-        npm ci
+        npm clean-install
         cp -f src/data.github.js src/data.js
         ../scripts/adjust_homepage.sh "https://stegschreck.github.io"
         npm run build
@@ -93,15 +93,15 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js latest
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: latest
       - name: Build for AWS
         run: |
           cd uberpage
           npm install -g npm@latest
-          npm ci
+          npm clean-install
           cp -f src/data.aws.js src/data.js
           ../scripts/adjust_homepage.sh "https://uberpage.schreck.berlin"
           npm run build
