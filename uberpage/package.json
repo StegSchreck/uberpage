@@ -6,7 +6,7 @@
   "private": true,
   "homepage": "https://stegschreck.github.io",
   "dependencies": {
-    "react": "^18.3.1",
+    "react": "^19.1.0",
     "react-dom": "^18.3.1",
     "react-scripts": "^5.0.1"
   },
