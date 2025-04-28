@@ -1,3 +1,14 @@
+import {
+  createRoot,
+  createRoot,
+  createRoot,
+  createRoot,
+  createRoot,
+  createRoot,
+  createRoot,
+  createRoot,
+} from "react-dom/client";
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import UberTile from './UberTile.jsx';
@@ -5,8 +16,14 @@ import UberTile from './UberTile.jsx';
 describe('UberTile Component', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<UberTile item={{}} settings={{}} height={100} width={100} gridColumnStart={1} gridColumnEnd={2} gridRow={1} />, div);
-    ReactDOM.unmountComponentAtNode(div);
+    const root = createRoot(div);
+
+    root.render(
+      <UberTile item={{}} settings={{}} height={100} width={100} gridColumnStart={1} gridColumnEnd={2} gridRow={1} />
+    );
+
+    const root = createRoot(div);
+    root.unmount();
   });
 
   it('renders single item correctly', () => {
@@ -18,7 +35,12 @@ describe('UberTile Component', () => {
       background_logo_size: '75%',
     };
     const div = document.createElement('div');
-    ReactDOM.render(<UberTile item={defaultItem} settings={{}} height={100} width={100} gridColumnStart={1} gridColumnEnd={2} gridRow={1} />, div);
+    const root = createRoot(div);
+
+    root.render(
+      <UberTile item={defaultItem} settings={{}} height={100} width={100} gridColumnStart={1} gridColumnEnd={2} gridRow={1} />
+    );
+
     const uberTiles = ReactDOM.findDOMNode(div).getElementsByClassName('UberTile');
 
     expect(uberTiles.length).toBe(1);
@@ -27,7 +49,8 @@ describe('UberTile Component', () => {
     expect(uberTiles[0].getElementsByClassName('UberTile-background-image')[0].attributes[1].value.includes(defaultItem.background_logo));
     expect(uberTiles[0].getElementsByClassName('UberTile-background-image')[0].attributes[1].value.includes(defaultItem.background_logo_size));
     expect(uberTiles[0].getElementsByClassName('UberTile-title')[0].getElementsByTagName('span')[0].textContent).toBe(defaultItem.title);
-    ReactDOM.unmountComponentAtNode(div);
+    const root = createRoot(div);
+    root.unmount();
   });
 
   it('renders single item for second row', () => {
@@ -43,7 +66,12 @@ describe('UberTile Component', () => {
       background_color: 'white',
     };
     const div = document.createElement('div');
-    ReactDOM.render(<UberTile item={defaultItem} settings={{}} height={50} width={100} gridColumnStart={1} gridColumnEnd={3} gridRow={2} />, div);
+    const root = createRoot(div);
+
+    root.render(
+      <UberTile item={defaultItem} settings={{}} height={50} width={100} gridColumnStart={1} gridColumnEnd={3} gridRow={2} />
+    );
+
     const uberTiles = ReactDOM.findDOMNode(div).getElementsByClassName('UberTile');
 
     expect(uberTiles.length).toBe(1);
@@ -57,13 +85,19 @@ describe('UberTile Component', () => {
     expect(uberTiles[0].getElementsByClassName('UberTile-background-image')[0].attributes[1].value.includes(defaultItem.background_picture_size));
     expect(uberTiles[0].getElementsByClassName('UberTile-title')[0].attributes[1].value.includes(defaultItem.text_color));
     expect(uberTiles[0].getElementsByClassName('UberTile-title')[0].getElementsByTagName('span')[0].textContent).toBe(defaultItem.title);
-    ReactDOM.unmountComponentAtNode(div);
+    const root = createRoot(div);
+    root.unmount();
   });
 
   it('renders minimalisitc item tile', () => {
     const defaultItem = {};
     const div = document.createElement('div');
-    ReactDOM.render(<UberTile item={defaultItem} settings={{}} height={100} width={100} gridColumnStart={1} gridColumnEnd={2} gridRow={1} />, div);
+    const root = createRoot(div);
+
+    root.render(
+      <UberTile item={defaultItem} settings={{}} height={100} width={100} gridColumnStart={1} gridColumnEnd={2} gridRow={1} />
+    );
+
     const uberTiles = ReactDOM.findDOMNode(div).getElementsByClassName('UberTile');
 
     expect(uberTiles.length).toBe(1);
@@ -77,6 +111,7 @@ describe('UberTile Component', () => {
     expect(!uberTiles[0].getElementsByClassName('UberTile-background-image')[0].attributes[1].value.includes(defaultItem.background_picture_size));
     expect(!uberTiles[0].getElementsByClassName('UberTile-title')[0].attributes[1].value.includes(defaultItem.text_color));
     expect(uberTiles[0].getElementsByClassName('UberTile-title')[0].getElementsByTagName('span')[0].textContent).toBe('');
-    ReactDOM.unmountComponentAtNode(div);
+    const root = createRoot(div);
+    root.unmount();
   });
 });
