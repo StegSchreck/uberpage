@@ -18,7 +18,7 @@
     "test": "react-scripts test",
     "lint": "eslint .",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
+    "predeploy": "yarn run build",
     "deploy": "gh-pages -b master -d build -r git@github.com:StegSchreck/stegschreck.github.io.git"
   },
   "eslintConfig": {
