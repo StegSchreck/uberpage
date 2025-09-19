@@ -18,15 +18,16 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install, build, and test
+    - name: install, build, and test
       run: |
         cd uberpage
-        npm clean-install
-        npm run lint
-        npm test -- --coverage
+        npm install --global yarn
+        yarn install --immutable
+        yarn run lint
+        yarn test -- --coverage
         cp -f src/data.github.js src/data.js
         ../scripts/adjust_homepage.sh "https://stegschreck.github.io"
-        npm run build
+        yarn run build
       env:
         CI: true
     - name: Codacy Coverage Reporter
@@ -62,11 +63,11 @@ jobs:
     - name: Build for GH Page
       run: |
         cd uberpage
-        npm install -g npm@latest
-        npm clean-install
+        npm install --global yarn
+        yarn install --immutable
         cp -f src/data.github.js src/data.js
         ../scripts/adjust_homepage.sh "https://stegschreck.github.io"
-        npm run build
+        yarn run build
       env:
         CI: true
     - name: Deploy GitHub Page
@@ -100,11 +101,11 @@ jobs:
       - name: Build for AWS
         run: |
           cd uberpage
-          npm install -g npm@latest
-          npm clean-install
+          npm install --global yarn
+          yarn install --immutable
           cp -f src/data.aws.js src/data.js
           ../scripts/adjust_homepage.sh "https://uberpage.schreck.berlin"
-          npm run build
+          yarn run build
         env:
           CI: true
       - name: Checkout code on S3

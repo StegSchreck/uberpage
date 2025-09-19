@@ -6,7 +6,8 @@ cache:
 
 before_script:
   - cd uberpage
-  - npm ci
+  - npm install --global yarn
+  - yarn install --immutable
 
 stages:
   - test
@@ -16,19 +17,19 @@ stages:
 lint:
   stage: test
   script:
-    - CI=true npm run lint
+    - CI=true yarn run lint
 
 test:
   stage: test
   script:
-    - CI=true npm run test
+    - CI=true yarn run test
 
 build:
   stage: build
   script:
     - ../scripts/adjust_homepage.sh "https://stegschreck.gitlab.io"
     - cp -f src/data.gitlab.js src/data.js
-    - CI=true npm run build
+    - CI=true yarn run build
   artifacts:
     name: "$CI_COMMIT_REF_NAME"
     paths:

@@ -24,7 +24,7 @@ In the `uberpage/package.json` adjust the following settings:
 ### Step 2: Deploy
 Run the following command in the directory `uberpage` to deploy:
 ```bash
-npm run deploy
+yarn run deploy
 ```
 This will then deploy to the master branch of the repository to the specified repository. In order to make the GitHub user page work, it has to be deployed in the master branch.
 
