@@ -6,11 +6,11 @@
   "private": true,
   "homepage": "https://stegschreck.github.io",
   "dependencies": {
-    "eslint": "^9.37.0",
-    "eslint-plugin-react": "^7.37.5",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "react-scripts": "^5.0.1"
+    "eslint": "9.37.0",
+    "eslint-plugin-react": "7.37.5",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
