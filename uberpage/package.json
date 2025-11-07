@@ -6,7 +6,7 @@
   "private": true,
   "homepage": "https://stegschreck.github.io",
   "dependencies": {
-    "eslint": "9.38.0",
+    "eslint": "9.39.1",
     "eslint-plugin-react": "7.37.5",
     "react": "19.1.1",
     "react-dom": "19.1.1",
