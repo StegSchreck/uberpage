@@ -27,6 +27,7 @@ jobs:
         yarn test -- --coverage
         pwd
         ls -la .
+        ls -la ..
         ls -la coverage
         cp -f src/data.github.js src/data.js
         ../scripts/adjust_homepage.sh "https://stegschreck.github.io"
@@ -37,6 +38,7 @@ jobs:
       run: |
         pwd
         ls -la .
+        ls -la ..
         ls -la coverage
       env:
         CI: true
