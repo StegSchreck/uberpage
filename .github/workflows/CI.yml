@@ -24,7 +24,7 @@ jobs:
         corepack enable
         yarn install --immutable
         yarn run lint
-        yarn test -- --coverage
+        yarn test -- --run
         cp -f src/data.github.js src/data.js
         ../scripts/adjust_homepage.sh "https://stegschreck.github.io"
         yarn run build
