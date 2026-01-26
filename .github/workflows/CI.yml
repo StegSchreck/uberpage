@@ -19,12 +19,12 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: install, build, and test
+      working-directory: ./uberpage
       run: |
-        cd uberpage
         corepack enable
         yarn install --immutable
         yarn run lint
-        yarn test -- --run
+        yarn test -- --coverage
         cp -f src/data.github.js src/data.js
         ../scripts/adjust_homepage.sh "https://stegschreck.github.io"
         yarn run build
@@ -35,6 +35,7 @@ jobs:
       with:
         api-token: ${{ secrets.CODACY_API_TOKEN }}
         project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+        coverage-reports: uberpage/coverage/lcov.info
 
   release:
     needs: build
@@ -61,8 +62,8 @@ jobs:
       with:
         node-version: latest
     - name: Build for GH Page
+      working-directory: ./uberpage
       run: |
-        cd uberpage
         corepack enable
         yarn install --immutable
         cp -f src/data.github.js src/data.js
@@ -74,13 +75,9 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4
       if: github.ref_name == 'master'
       with:
-        # GitHub repository where assets will be deployed (default current)
         repository-name: StegSchreck/stegschreck.github.io
-        # Git branch where assets will be deployed
         branch: master
-        # delete files from your deployment destination that no longer exist in your deployment source
         clean: true
-        # Build directory to deploy
         folder: uberpage/build
         token: ${{ secrets.GHA_PAT }}
 
@@ -99,8 +96,8 @@ jobs:
       with:
         node-version: latest
     - name: Build for AWS
+      working-directory: ./uberpage
       run: |
-        cd uberpage
         corepack enable
         yarn install --immutable
         cp -f src/data.aws.js src/data.js
