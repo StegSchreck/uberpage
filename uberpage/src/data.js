@@ -21,12 +21,6 @@ export default {
       background_logo: 'Medium.svg',
       background_color: '#FFFFFF',
     },
-    // {
-    //   link: 'https://twitter.com/StegSchreck',
-    //   background_logo: 'Twitter.svg',
-    //   background_logo_size: 'contain',
-    //   background_color: '#1DA1F2',
-    // },
   ],
   settings: {
     default_link_target: '_blank',
