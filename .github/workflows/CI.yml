@@ -26,9 +26,8 @@ jobs:
         yarn run lint
         yarn test -- --coverage
         pwd
-        ls -la uberpage
+        ls -la .
         ls -la coverage
-        ls -la uberpage/coverage
         cp -f src/data.github.js src/data.js
         ../scripts/adjust_homepage.sh "https://stegschreck.github.io"
         yarn run build
@@ -37,9 +36,8 @@ jobs:
     - name: check directories for coverage
       run: |
         pwd
-        ls -la uberpage
+        ls -la .
         ls -la coverage
-        ls -la uberpage/coverage
       env:
         CI: true
     - name: Codacy Coverage Reporter
