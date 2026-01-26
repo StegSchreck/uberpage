@@ -21,7 +21,7 @@ jobs:
     - name: install, build, and test
       run: |
         cd uberpage
-        npm install --global yarn
+        corepack enable
         yarn install --immutable
         yarn run lint
         yarn test -- --coverage
@@ -63,7 +63,7 @@ jobs:
     - name: Build for GH Page
       run: |
         cd uberpage
-        npm install --global yarn
+        corepack enable
         yarn install --immutable
         cp -f src/data.github.js src/data.js
         ../scripts/adjust_homepage.sh "https://stegschreck.github.io"
@@ -92,29 +92,29 @@ jobs:
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Use Node.js latest
-        uses: actions/setup-node@v4
-        with:
-          node-version: latest
-      - name: Build for AWS
-        run: |
-          cd uberpage
-          npm install --global yarn
-          yarn install --immutable
-          cp -f src/data.aws.js src/data.js
-          ../scripts/adjust_homepage.sh "https://uberpage.schreck.berlin"
-          yarn run build
-        env:
-          CI: true
-      - name: Checkout code on S3
-        uses: reggionick/s3-deploy@v4
-        with:
-          folder: uberpage/build
-          bucket: ${{ secrets.AWS_S3_BUCKET }}
-          bucket-region: eu-central-1
-          dist-id: ${{ secrets.AWS_CLOUDFORNT_ID }}
-          delete-removed: true
-          no-cache: true
-          private: true
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Use Node.js latest
+      uses: actions/setup-node@v4
+      with:
+        node-version: latest
+    - name: Build for AWS
+      run: |
+        cd uberpage
+        corepack enable
+        yarn install --immutable
+        cp -f src/data.aws.js src/data.js
+        ../scripts/adjust_homepage.sh "https://uberpage.schreck.berlin"
+        yarn run build
+      env:
+        CI: true
+    - name: Checkout code on S3
+      uses: reggionick/s3-deploy@v4
+      with:
+        folder: uberpage/build
+        bucket: ${{ secrets.AWS_S3_BUCKET }}
+        bucket-region: eu-central-1
+        dist-id: ${{ secrets.AWS_CLOUDFORNT_ID }}
+        delete-removed: true
+        no-cache: true
+        private: true
