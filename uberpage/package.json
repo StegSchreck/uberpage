@@ -15,6 +15,7 @@
     "start": "vite",
     "build": "vite build",
     "test": "vitest",
+    "coverage": "vitest run --coverage",
     "lint": "eslint .",
     "predeploy": "yarn run build",
     "deploy": "gh-pages -b master -d build -r git@github.com:StegSchreck/stegschreck.github.io.git"

@@ -24,22 +24,10 @@ jobs:
         corepack enable
         yarn install --immutable
         yarn run lint
-        yarn test -- --coverage
-        pwd
-        ls -la .
-        ls -la ..
-        ls -la coverage
+        yarn run coverage
         cp -f src/data.github.js src/data.js
         ../scripts/adjust_homepage.sh "https://stegschreck.github.io"
         yarn run build
-      env:
-        CI: true
-    - name: check directories for coverage
-      run: |
-        pwd
-        ls -la .
-        ls -la ..
-        ls -la coverage
       env:
         CI: true
     - name: Codacy Coverage Reporter
