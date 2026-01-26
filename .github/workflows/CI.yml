@@ -18,15 +18,13 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-    - name: install, build, and test
+    - name: install, lint, test, build
       working-directory: ./uberpage
       run: |
         corepack enable
         yarn install --immutable
         yarn run lint
         yarn run coverage
-        cp -f src/data.github.js src/data.js
-        ../scripts/adjust_homepage.sh "https://stegschreck.github.io"
         yarn run build
       env:
         CI: true
@@ -44,7 +42,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Create Release
       uses: softprops/action-gh-release@v2
       env:

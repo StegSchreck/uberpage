@@ -11,20 +11,18 @@ jobs:
     if: github.actor == 'dependabot[bot]'
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Use Node.js latest
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: latest
-      - name: install, build, and test
+      - name: install, lint, test, build
+        working-directory: ./uberpage
         run: |
-          cd uberpage
-          npm install --global yarn
+          corepack enable
           yarn install --immutable
           yarn run lint
-          yarn run test
-          cp -f src/data.github.js src/data.js
-          ../scripts/adjust_homepage.sh "https://stegschreck.github.io"
+          yarn run coverage
           yarn run build
         env:
           CI: true
