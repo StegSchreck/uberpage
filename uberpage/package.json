@@ -6,10 +6,10 @@
   "private": true,
   "homepage": "https://stegschreck.github.io",
   "dependencies": {
-    "eslint": "9.39.2",
+    "eslint": "10.2.1",
     "eslint-plugin-react": "7.37.5",
-    "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react": "19.2.5",
+    "react-dom": "19.2.5"
   },
   "scripts": {
     "start": "vite",
@@ -37,10 +37,10 @@
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.9.1",
-    "@vitejs/plugin-react": "^5.1.4",
+    "@vitejs/plugin-react": "^6.0.1",
     "@vitest/coverage-v8": "^4.1.4",
     "gh-pages": "^6.3.0",
-    "jsdom": "^28.1.0",
+    "jsdom": "^29.0.2",
     "vite": "^8.0.8",
     "vitest": "^4.1.4"
   },
