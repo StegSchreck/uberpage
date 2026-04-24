@@ -41,7 +41,7 @@
     "@vitest/coverage-v8": "^4.1.4",
     "gh-pages": "^6.3.0",
     "jsdom": "^29.0.2",
-    "vite": "^8.0.8",
+    "vite": "^8.0.10",
     "vitest": "^4.1.4"
   },
   "packageManager": "yarn@4.12.0"
