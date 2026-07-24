@@ -9,7 +9,7 @@
     "eslint": "10.7.0",
     "eslint-plugin-react": "7.37.5",
     "react": "19.2.7",
-    "react-dom": "19.2.7"
+    "react-dom": "19.2.8"
   },
   "scripts": {
     "start": "vite",
