@@ -42,7 +42,7 @@
     "gh-pages": "^6.3.0",
     "globals": "^17.12.0",
     "jsdom": "^29.1.1",
-    "vite": "^8.2.2",
+    "vite": "^8.3.0",
     "vitest": "^4.1.11"
   },
   "packageManager": "yarn@4.12.0"
