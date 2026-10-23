@@ -3646,10 +3646,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:19.2.7":
-  version: 19.2.7
-  resolution: "react@npm:19.2.7"
-  checksum: 10c0/0bd0e2f1bbd4ba97561c6597bf8a5fec05e6476fe61e165c1065598d16668efc6715205599c94d3ddd49d36cb0f21cbf1b9bcc18ee840b805ce222c3e8d558ac
+"react@npm:19.3.1":
+  version: 19.3.1
+  resolution: "react@npm:19.3.1"
+  checksum: 10c0/f0ed036d1223562c09c8347858ca712733ea6e27a30db709ee9c3f3f176d3e9e767afce735d59956addf3d030102e256bba82dea635fc1bdb0e01107e98fef10
   languageName: node
   linkType: hard
 
@@ -4422,7 +4422,7 @@ __metadata:
     gh-pages: "npm:^6.3.0"
     globals: "npm:^17.13.0"
     jsdom: "npm:^29.1.1"
-    react: "npm:19.2.7"
+    react: "npm:19.3.1"
     react-dom: "npm:19.2.7"
     vite: "npm:^8.3.5"
     vitest: "npm:^4.1.11"
